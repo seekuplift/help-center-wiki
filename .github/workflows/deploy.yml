@@ -1,0 +1,68 @@
+# Build the wiki with MkDocs and publish to GitHub Pages.
+#
+# This workflow is committed as the deploy PIPELINE for ticket HC-2. Per the
+# operator scope override, it is NEVER executed by an agent: the human performs
+# the deploy. It is kept here so the build+deploy path is reproducible and
+# documented in version control, not just in README.md.
+#
+# Pages target: this repo's own GitHub Pages site. The workflow:
+#   1. Installs the pinned mkdocs + mkdocs-material from requirements.txt.
+#   2. Runs `mkdocs build` to produce site/.
+#   3. Uploads site/ as the Pages artifact and deploys it.
+#
+# Before first run, GitHub repo Settings → Pages → "Build and deployment"
+# → Source must be set to "GitHub Actions".
+
+name: Build and deploy wiki to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; cancel in-flight runs on the same ref.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build site
+        run: mkdocs build --strict --clean
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

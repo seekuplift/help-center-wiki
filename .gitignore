@@ -1,0 +1,14 @@
+# MkDocs build output — generated, not source.
+site/
+
+# Python virtualenv used for local builds.
+.venv/
+
+# Python bytecode caches.
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editor / OS noise.
+.DS_Store
+*.swp

@@ -1,0 +1,7 @@
+# Python build dependencies for the Seek Uplift help-center wiki.
+# Pin exact versions so the build is reproducible by hand and in CI.
+# Install into a virtualenv (see README.md):
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+
+mkdocs==1.6.1
+mkdocs-material==9.6.21

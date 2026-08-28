@@ -1,0 +1,47 @@
+# MkDocs configuration for the Seek Uplift help-center wiki.
+#
+# Stock Material theme — no custom theme, no project CSS, no project JS, no
+# overrides/ directory. Analytics and cookie-consent plugins are intentionally
+# OFF: the wiki is rendered inside the app's incognito WebView, where anything
+# that touches browser storage misbehaves.
+#
+# Ticket HC-2 (redesign/launchpad-mobile-redesign/tickets-help-center.md).
+# Design spec: docs/superpowers/specs/2026-08-27-in-app-help-center-design.md
+#   section 2 "Wiki".
+
+site_name: Seek Uplift Help Center
+site_description: Help center wiki for the Seek Uplift app.
+# TODO: deployed URL — set after the GitHub Pages deploy is performed by hand.
+# HC-3 consumes this URL as EXPO_PUBLIC_WIKI_URL.
+site_url: ""  # left blank until the public URL is known
+
+# Build output goes to site/ (the MkDocs default). Both site/ and .venv/ are
+# gitignored — see .gitignore.
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    - search.suggest
+  # Stock palette — Material's default light/dark handling. No custom colors,
+  # no fonts, no overrides.
+
+# No `plugins:` key — accept MkDocs' default, which includes the built-in
+# `search` plugin. Search is client-side (lunr, generated at build time) and
+# needs no cookies, no network calls at render time, and no auth, so it is
+# safe in the app's incognito WebView. The `search.suggest` theme feature
+# above depends on this plugin being present.
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
