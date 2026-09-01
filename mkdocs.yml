@@ -22,7 +22,11 @@ theme:
   name: material
   features:
     - navigation.top
+    - navigation.footer
+    - navigation.sections
     - search.suggest
+    - search.highlight
+    - toc.follow
   # Stock palette — Material's default light/dark handling. No custom colors,
   # no fonts, no overrides.
 
@@ -38,9 +42,29 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.snippets:
+      base_path:
+        - .
+      check_paths: true
   - tables
   - toc:
       permalink: true
 
 nav:
   - Home: index.md
+  - Using the app:
+    - Getting started: getting-started.md
+    - Wallets: wallets.md
+    - Account: account.md
+    - Buy and sell: trading.md
+    - Discover and callouts: callouts.md
+    - Communities: communities.md
+  - Launching:
+    - Launch a coin: launching.md
+    - Fees: fees.md
+    - Graduation: graduation.md
+    - Creators: creators.md
+  - Help:
+    - Getting help: support.md
+    - Privacy and safety: privacy.md
+    - FAQ: faq.md

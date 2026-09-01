@@ -21,12 +21,31 @@ It is the deliverable for ticket **HC-2** in
 wiki/
 ├── .github/workflows/deploy.yml   # CI pipeline: mkdocs build → GitHub Pages
 ├── .gitignore                     # ignores site/ and .venv/
+├── includes/
+│   └── test-banner.md             # shared PUBLIC TEST admonition (not a page)
 ├── docs/
-│   └── index.md                   # the home page (real content, not lorem)
+│   ├── index.md                   # help-center home (user-facing)
+│   ├── getting-started.md
+│   ├── wallets.md
+│   ├── account.md
+│   ├── trading.md
+│   ├── fees.md                    # bonding-curve fee split (source of truth)
+│   ├── launching.md
+│   ├── graduation.md
+│   ├── creators.md
+│   ├── communities.md
+│   ├── callouts.md
+│   ├── support.md
+│   ├── privacy.md
+│   └── faq.md
 ├── mkdocs.yml                     # MkDocs + Material config (stock)
-├── README.md                      # this file
+├── README.md                      # this file (operators / agents)
 └── requirements.txt               # pinned mkdocs + mkdocs-material
 ```
+
+User-facing copy lives in `docs/`. This README is for operators and agents
+(build, deploy, how to add a page). Do not put agent instructions on a wiki
+page — testers read those pages inside the app.
 
 ## Build by hand
 
@@ -109,8 +128,13 @@ web with `npx expo export -p web --clear` (Metro's transform cache ignores env).
 
 Markdown extensions enabled in `mkdocs.yml`: `admonition`, `pymdownx.details`,
 `pymdownx.superfences` (fenced code with syntax highlighting),
-`pymdownx.tabbed`, `tables`, and `toc` with permalink anchors. Use them; do
-not add bespoke HTML/CSS.
+`pymdownx.tabbed`, `pymdownx.snippets` (shared `includes/test-banner.md` on
+every page except the longer home warning), `tables`, and `toc` with permalink
+anchors. Use them; do not add bespoke HTML/CSS.
+
+Every user-facing page must keep a **PUBLIC TEST — NOT PRODUCTION** warning.
+Home has the long form; other pages include `includes/test-banner.md` via
+`--8<--`. Do not drop the banner because the copy got “more production-ready.”
 
 ## Mobile (360px) check
 
