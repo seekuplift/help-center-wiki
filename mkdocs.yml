@@ -1,15 +1,16 @@
 # MkDocs configuration for the Seek Uplift help-center wiki.
 #
-# Stock Material theme — no custom theme, no project CSS, no project JS, no
-# overrides/ directory. Analytics and cookie-consent plugins are intentionally
-# OFF: the wiki is rendered inside the app's incognito WebView, where anything
-# that touches browser storage misbehaves.
+# Material theme plus a SeekUplift brand layer (dark navy, sprout teal,
+# Space Grotesk / DM Sans, Token Sprout logo). No project JavaScript.
+# Analytics and cookie-consent plugins stay OFF: the wiki is rendered
+# inside the app's incognito WebView, where anything that touches browser
+# storage misbehaves.
 #
 # Ticket HC-2 (redesign/launchpad-mobile-redesign/tickets-help-center.md).
 # Design spec: docs/superpowers/specs/2026-08-27-in-app-help-center-design.md
-#   section 2 "Wiki".
+#   section 2 "Wiki". Brand tokens: brand/SEEKUPLIFT_DESIGN_SYSTEM.md.
 
-site_name: Seek Uplift Help Center (TEST)
+site_name: Seek Uplift
 site_description: PUBLIC TEST help-center wiki for Seek Uplift — not production; no promises.
 # Public test Pages URL under the corp account. HC-3 consumes this as EXPO_PUBLIC_WIKI_URL.
 site_url: https://seekuplift.github.io/help-center-wiki/
@@ -20,6 +21,18 @@ docs_dir: docs
 
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  custom_dir: overrides
+  font:
+    text: DM Sans
+    code: DM Mono
+  palette:
+    # Dark-first, matching the app. No light/dark toggle — a toggle would
+    # persist to localStorage, which is unreliable in the incognito WebView.
+    scheme: slate
+    primary: black
+    accent: teal
   features:
     - navigation.top
     - navigation.footer
@@ -27,8 +40,14 @@ theme:
     - search.suggest
     - search.highlight
     - toc.follow
-  # Stock palette — Material's default light/dark handling. No custom colors,
-  # no fonts, no overrides.
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  generator: false
+
+copyright: Seek Uplift — public test help center. No promises.
 
 # No `plugins:` key — accept MkDocs' default, which includes the built-in
 # `search` plugin. Search is client-side (lunr, generated at build time) and

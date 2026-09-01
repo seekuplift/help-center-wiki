@@ -3,10 +3,10 @@
 A static help-center wiki for the **Seek Uplift** app, built with
 [MkDocs](https://www.mkdocs.org/) and the
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme,
-**used stock** — no custom theme, no project CSS, no project JS, no
-`overrides/` directory. Analytics and cookie-consent plugins are OFF on
-purpose: the wiki renders inside the app's incognito WebView, where anything
-that touches browser storage misbehaves.
+plus a SeekUplift brand layer (dark navy, sprout teal, Space Grotesk / DM Sans,
+Token Sprout logo). No project JavaScript. Analytics and cookie-consent
+plugins are OFF on purpose: the wiki renders inside the app's incognito
+WebView, where anything that touches browser storage misbehaves.
 
 This repo is one of the independent git repos under the
 `solana/meteora-scaffold-3` workspace root (the root itself is not a git repo).
@@ -24,6 +24,11 @@ wiki/
 ├── includes/
 │   └── test-banner.md             # shared PUBLIC TEST admonition (not a page)
 ├── docs/
+│   ├── assets/
+│   │   ├── logo.png               # Token Sprout header mark
+│   │   └── favicon.png
+│   ├── stylesheets/
+│   │   └── extra.css              # SeekUplift palette, type, surfaces
 │   ├── index.md                   # help-center home (user-facing)
 │   ├── getting-started.md
 │   ├── wallets.md
@@ -38,7 +43,9 @@ wiki/
 │   ├── support.md
 │   ├── privacy.md
 │   └── faq.md
-├── mkdocs.yml                     # MkDocs + Material config (stock)
+├── overrides/
+│   └── main.html                  # theme-color + Space Grotesk
+├── mkdocs.yml                     # MkDocs + Material + brand layer
 ├── README.md                      # this file (operators / agents)
 └── requirements.txt               # pinned mkdocs + mkdocs-material
 ```
@@ -130,7 +137,8 @@ Markdown extensions enabled in `mkdocs.yml`: `admonition`, `pymdownx.details`,
 `pymdownx.superfences` (fenced code with syntax highlighting),
 `pymdownx.tabbed`, `pymdownx.snippets` (shared `includes/test-banner.md` on
 every page except the longer home warning), `tables`, and `toc` with permalink
-anchors. Use them; do not add bespoke HTML/CSS.
+anchors. Use them. Visual brand lives in `docs/stylesheets/extra.css` and
+`overrides/main.html` — do not add page-level HTML/CSS or project JavaScript.
 
 Every user-facing page must keep a **PUBLIC TEST — NOT PRODUCTION** warning.
 Home has the long form; other pages include `includes/test-banner.md` via
@@ -153,12 +161,14 @@ Measured for HC-2 with headless Chromium at 360x640 against `docs/index.md`:
 `scrollWidth == clientWidth == 360` before and after opening the drawer, drawer
 opens, no console errors.
 
-Note the mechanism: stock Material at 360px **wraps** wide content
+Note the mechanism: Material at 360px **wraps** wide content
 (`pre { white-space: pre-wrap }` plus `overflow-wrap: break-word` on
 `.md-typeset`) rather than scrolling it inside a container. Either behaviour
 satisfies the requirement — what must hold is that the *page* never scrolls
-horizontally. Do not add project CSS to change this; stock-theme-only is a
-ticket constraint.
+horizontally. Brand CSS in `docs/stylesheets/extra.css` must keep that wrap
+and must not introduce a page-level horizontal scroll. No project JavaScript,
+analytics, or cookie-consent plugins — those still misbehave in the
+incognito WebView.
 
 ## License / scope
 
