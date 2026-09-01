@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 import urllib.error
 import urllib.request
 from typing import Any
@@ -61,6 +62,10 @@ def _request(
     if body is not None:
         data = json.dumps(body).encode("utf-8")
         req_headers.setdefault("Content-Type", "application/json")
+    req_headers.setdefault(
+        "User-Agent",
+        "SeekUpliftWiki/1.0 (Algolia; +https://seekuplift.github.io/help-center-wiki/)",
+    )
     req = urllib.request.Request(url, data=data, headers=req_headers, method=method)
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
@@ -71,6 +76,52 @@ def _request(
         raise AlgoliaError(exc.code, err_body, url) from exc
 
 
+def _hosts(app_id: str) -> list[str]:
+    # `{appId}.algolia.net` does not always resolve; DSN + algolianet fallbacks do.
+    aid = app_id.lower()
+    return [
+        f"{app_id}-dsn.algolia.net",
+        f"{app_id}-1.algolianet.com",
+        f"{app_id}-2.algolianet.com",
+        f"{app_id}-3.algolianet.com",
+        f"{app_id}.algolia.net",
+        f"{aid}.algolia.net",
+    ]
+
+
+def _first_ok(
+    method: str,
+    path: str,
+    *,
+    app_id: str,
+    api_key: str,
+    extra_headers: dict[str, str] | None = None,
+    body: Any | None = None,
+) -> Any:
+    headers = {
+        "x-algolia-application-id": app_id,
+        "x-algolia-api-key": api_key,
+    }
+    if extra_headers:
+        headers.update(extra_headers)
+    last_err: Exception | None = None
+    for host in _hosts(app_id):
+        url = f"https://{host}{path}"
+        try:
+            return _request(method, url, headers=headers, body=body)
+        except AlgoliaError as exc:
+            # Cloudflare 1010 on one edge (DSN) is not the API's answer —
+            # try the next host. Real 4xx from Agent Studio / Search still raise.
+            if exc.status == 403 and "cloudflare" in exc.body.lower():
+                last_err = exc
+                continue
+            raise
+        except Exception as exc:  # DNS / connect
+            last_err = exc
+            continue
+    raise last_err or RuntimeError(f"No Algolia host reachable for {path}")
+
+
 def search_api(
     app_id: str,
     api_key: str,
@@ -78,16 +129,7 @@ def search_api(
     path: str,
     body: Any | None = None,
 ) -> Any:
-    url = f"https://{app_id}.algolia.net{path}"
-    return _request(
-        method,
-        url,
-        headers={
-            "x-algolia-application-id": app_id,
-            "x-algolia-api-key": api_key,
-        },
-        body=body,
-    )
+    return _first_ok(method, path, app_id=app_id, api_key=api_key, body=body)
 
 
 def agent_studio(
@@ -97,15 +139,15 @@ def agent_studio(
     path: str,
     body: Any | None = None,
 ) -> Any:
-    url = f"https://{app_id}.algolia.net/agent-studio{path}"
-    return _request(
+    # Docs name `{APPLICATION_ID}.algolia.net/agent-studio`. That host does not
+    # resolve on this network; the Search DSN / algolianet hosts do, and they
+    # serve the same Agent Studio API. `_first_ok` skips Cloudflare 1010.
+    return _first_ok(
         method,
-        url,
-        headers={
-            "x-algolia-application-id": app_id,
-            "x-algolia-api-key": api_key,
-            "accept": "application/json",
-        },
+        f"/agent-studio{path}",
+        app_id=app_id,
+        api_key=api_key,
+        extra_headers={"accept": "application/json"},
         body=body,
     )
 
@@ -157,21 +199,40 @@ MARKDOWN_SETTINGS = {
 }
 
 
+def wait_task(app_id: str, api_key: str, index: str, task_id: Any, timeout: float = 60) -> None:
+    """Block until an indexing task is published. Clear-then-batch without this
+    can leave the index empty: Algolia runs tasks asynchronously, and a later
+    clear can wipe a batch that already returned 200."""
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        data = search_api(app_id, api_key, "GET", f"/1/indexes/{index}/task/{task_id}")
+        if isinstance(data, dict) and data.get("status") == "published":
+            return
+        time.sleep(0.25)
+    raise TimeoutError(f"Algolia task {task_id} on {index} not published within {timeout}s")
+
+
 def replace_all_objects(app_id: str, api_key: str, index: str, objects: list[dict]) -> None:
-    search_api(app_id, api_key, "POST", f"/1/indexes/{index}/clear")
+    cleared = search_api(app_id, api_key, "POST", f"/1/indexes/{index}/clear")
+    if isinstance(cleared, dict) and "taskID" in cleared:
+        wait_task(app_id, api_key, index, cleared["taskID"])
     if not objects:
         return
     batch_size = 500
     for i in range(0, len(objects), batch_size):
         chunk = objects[i : i + batch_size]
-        search_api(
+        batched = search_api(
             app_id,
             api_key,
             "POST",
             f"/1/indexes/{index}/batch",
             {"requests": [{"action": "addObject", "body": obj} for obj in chunk]},
         )
+        if isinstance(batched, dict) and "taskID" in batched:
+            wait_task(app_id, api_key, index, batched["taskID"])
 
 
 def set_index_settings(app_id: str, api_key: str, index: str, settings: dict) -> None:
-    search_api(app_id, api_key, "PUT", f"/1/indexes/{index}/settings", settings)
+    result = search_api(app_id, api_key, "PUT", f"/1/indexes/{index}/settings", settings)
+    if isinstance(result, dict) and "taskID" in result:
+        wait_task(app_id, api_key, index, result["taskID"])

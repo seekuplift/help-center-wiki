@@ -8,7 +8,14 @@
 # Pages target: this repo's own GitHub Pages site. The workflow:
 #   1. Installs the pinned mkdocs + mkdocs-material from requirements.txt.
 #   2. Runs `mkdocs build` to produce site/.
-#   3. Uploads site/ as the Pages artifact and deploys it.
+#   3. Reindexes Algolia from docs/*.md when secrets.ALGOLIA_WRITE_API_KEY
+#      is set; otherwise skips indexing and still deploys Pages.
+#   4. Uploads site/ as the Pages artifact and deploys it.
+#
+# Algolia secrets (repo Settings → Secrets → Actions):
+#   ALGOLIA_APP_ID, ALGOLIA_WRITE_API_KEY
+# Do not store the DeepSeek key or the search-only key here. Operator
+# checklist: README.md "Algolia search and Ask AI — deployment".
 #
 # Before first run, GitHub repo Settings → Pages → "Build and deployment"
 # → Source must be set to "GitHub Actions".
@@ -50,6 +57,17 @@ jobs:
 
       - name: Build site
         run: mkdocs build --strict --clean
+
+      - name: Index wiki in Algolia
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
+        run: |
+          if [ -z "$ALGOLIA_WRITE_API_KEY" ]; then
+            echo "Skipping Algolia index (ALGOLIA_WRITE_API_KEY secret not set)."
+            exit 0
+          fi
+          python scripts/index_algolia.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

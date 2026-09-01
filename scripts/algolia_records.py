@@ -94,10 +94,10 @@ def parse_nav_lvl0(nav: list[Any]) -> dict[str, str]:
     """Map markdown filename -> section title (DocSearch lvl0)."""
     mapping: dict[str, str] = {}
 
-    def walk(items: list[Any], section: str) -> None:
+    def walk(items: list[Any], section: str | None) -> None:
         for item in items:
             if isinstance(item, str):
-                mapping[Path(item).name] = section
+                mapping[Path(item).name] = section or "Help Center"
             elif isinstance(item, dict):
                 for title, value in item.items():
                     if isinstance(value, str):
@@ -105,7 +105,7 @@ def parse_nav_lvl0(nav: list[Any]) -> dict[str, str]:
                     elif isinstance(value, list):
                         walk(value, title)
 
-    walk(nav, "Help Center")
+    walk(nav, None)
     return mapping
 
 

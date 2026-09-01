@@ -2,12 +2,13 @@
    If anything is missing or the CDN/init fails, Material lunr search stays. */
 (function () {
   var CSS_HREF = "https://cdn.jsdelivr.net/npm/@docsearch/css@5/dist/style.css";
-  var JS_SRC = "https://cdn.jsdelivr.net/npm/@docsearch/js@5/dist/umd/index.js";
+  var JS_AI = "https://cdn.jsdelivr.net/npm/@docsearch/js@5/dist/umd/index.js";
+  var JS_SEARCH = "https://cdn.jsdelivr.net/npm/@docsearch/js@5/dist/umd/docsearch.js";
 
   function config() {
     var c = window.__ALGOLIA_DOCSEARCH;
     if (!c || typeof c !== "object") return null;
-    if (!c.appId || !c.apiKey || !c.indexName || !c.assistantId) return null;
+    if (!c.appId || !c.apiKey || !c.indexName) return null;
     return c;
   }
 
@@ -59,7 +60,7 @@
     search.parentNode.insertBefore(el, search);
 
     try {
-      window.docsearch({
+      var opts = {
         container: "#docsearch",
         appId: cfg.appId,
         apiKey: cfg.apiKey,
@@ -67,11 +68,14 @@
         theme: "dark",
         insights: false,
         disableUserPersonalization: true,
-        askAi: {
+      };
+      if (cfg.assistantId) {
+        opts.askAi = {
           assistantId: cfg.assistantId,
           indexName: cfg.markdownIndexName || cfg.indexName,
-        },
-      });
+        };
+      }
+      window.docsearch(opts);
       document.documentElement.classList.add("wiki-algolia");
     } catch (err) {
       if (el.parentNode) el.parentNode.removeChild(el);
@@ -81,7 +85,8 @@
   ready(function () {
     var cfg = config();
     if (!cfg) return;
-    Promise.all([loadStyle(CSS_HREF), loadScript(JS_SRC)])
+    var jsSrc = cfg.assistantId ? JS_AI : JS_SEARCH;
+    Promise.all([loadStyle(CSS_HREF), loadScript(jsSrc)])
       .then(function () {
         mount(cfg);
       })
