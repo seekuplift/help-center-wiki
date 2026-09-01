@@ -60,44 +60,39 @@ cd site && python3 -m http.server 8000
 The deploy pipeline lives in `.github/workflows/deploy.yml`. It runs
 `mkdocs build` and publishes `site/` to **GitHub Pages** for this repo.
 
-**Per the HC-2 operator scope override, an agent never performs the deploy.**
-The human does it. The exact by-hand sequence:
+**Operator-authorized public TEST deploy (2026-09-01):** corp account
+`seekuplift`, repo `help-center-wiki`, GitHub Pages via Actions. The historical
+HC-2 "agent never deploys" override is superseded for this one-time test
+stand-up. Reproducible sequence:
 
-1. Create the GitHub repo (the human does this — agents must not run
-   `gh repo create`, `git remote add`, or `git push`).
-2. Push this repo's `main` branch to the new remote.
+1. Create the GitHub repo under the corp account (`gh repo create …`).
+2. Push this repo's `main` branch to the remote.
 3. In the GitHub repo: **Settings → Pages → Build and deployment → Source**
-   → select **GitHub Actions**.
-4. Trigger the workflow (push to `main`, or run it from the Actions tab with
-   "Run workflow"). The `build` job runs `mkdocs build --strict --clean` and
-   uploads `site/`; the `deploy` job publishes it to Pages.
-5. Copy the resulting Pages URL (printed by the `deploy` job as
-   `page_url`, and shown in the repo's Pages settings) into the
-   `TODO: deployed URL` line below and into `mkdocs.yml`'s `site_url`.
+   → select **GitHub Actions** (or `gh api …/pages` with `build_type=workflow`).
+4. Trigger the workflow (push to `main`, or Actions → "Run workflow"). The
+   `build` job runs `mkdocs build --strict --clean` and uploads `site/`; the
+   `deploy` job publishes it to Pages.
+5. Record the Pages URL in this README and in `mkdocs.yml`'s `site_url`.
 
 If GitHub Pages is unavailable, the same `site/` directory can be deployed to
 any static host (Cloudflare Pages, Netlify, S3 + CloudFront) — `mkdocs build`
 produces plain HTML/CSS/JS with no server-side runtime.
 
-## TODO: deployed URL
+## Deployed URL (PUBLIC TEST)
 
 ```
-TODO: deployed URL — fill in after the human performs the GitHub Pages deploy.
+https://seekuplift.github.io/help-center-wiki/
 ```
+
+**This is a public TEST deployment** under the corp GitHub account
+`seekuplift/help-center-wiki`. It exists so the in-app Help → Wiki path can be
+exercised end to end. **No production promises** — content may be incomplete,
+wrong, or taken down without notice.
 
 **HC-3 consumes this URL as `EXPO_PUBLIC_WIKI_URL`** in the Seek Uplift app
-(`redesign/launchpad-mobile-redesign`). Until a real URL is set here, the
-app's wiki row stays hidden by design (HC-1 gates it behind
-`Boolean(process.env.EXPO_PUBLIC_WIKI_URL)`).
-
-When the URL is known:
-
-1. Set it in `.env` of the app repo as
-   `EXPO_PUBLIC_WIKI_URL=https://<org>.github.io/<repo>/`.
-2. Set it here in `mkdocs.yml` as `site_url:` so MkDocs emits canonical links
-   and sitemap entries against the real origin.
-3. Re-export the app web build with `npx expo export -p web --clear` (Metro's
-   transform cache ignores env).
+(`redesign/launchpad-mobile-redesign`). Set it in the app `.env` and re-export
+web with `npx expo export -p web --clear` (Metro's transform cache ignores env).
+`mkdocs.yml` `site_url` is already set to the same origin.
 
 ## Adding a page (for agents and humans)
 

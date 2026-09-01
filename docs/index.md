@@ -1,5 +1,15 @@
 # Seek Uplift Help Center
 
+!!! warning "PUBLIC TEST DEPLOYMENT — NOT PRODUCTION"
+    This wiki is a **public test deployment** under the Seek Uplift corporate
+    GitHub account (`seekuplift/help-center-wiki`). It exists so we can exercise
+    the in-app Help → Wiki path end to end.
+
+    **No promises are made.** Content may be incomplete, inaccurate, or removed
+    without notice. Do not treat anything here as a production help center,
+    support commitment, SLA, or product documentation of record. For real
+    support, use **Contact support** in the app when that channel is available.
+
 Welcome to the **Seek Uplift** help center. This wiki explains how the app works
 and how to get help when something goes wrong.
 

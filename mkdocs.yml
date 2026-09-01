@@ -9,11 +9,10 @@
 # Design spec: docs/superpowers/specs/2026-08-27-in-app-help-center-design.md
 #   section 2 "Wiki".
 
-site_name: Seek Uplift Help Center
-site_description: Help center wiki for the Seek Uplift app.
-# TODO: deployed URL — set after the GitHub Pages deploy is performed by hand.
-# HC-3 consumes this URL as EXPO_PUBLIC_WIKI_URL.
-site_url: ""  # left blank until the public URL is known
+site_name: Seek Uplift Help Center (TEST)
+site_description: PUBLIC TEST help-center wiki for Seek Uplift — not production; no promises.
+# Public test Pages URL under the corp account. HC-3 consumes this as EXPO_PUBLIC_WIKI_URL.
+site_url: https://seekuplift.github.io/help-center-wiki/
 
 # Build output goes to site/ (the MkDocs default). Both site/ and .venv/ are
 # gitignored — see .gitignore.
