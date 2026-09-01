@@ -1,0 +1,48 @@
+/* Header slot for Algolia DocSearch. Modal chrome stays on DocSearch's dark theme.
+   Applied only after algolia-init.js adds .wiki-algolia (config complete + mount). */
+
+#docsearch {
+  display: flex;
+  align-items: center;
+  margin-left: 0.25rem;
+  min-width: 0;
+}
+
+html.wiki-algolia .md-header .md-search,
+html.wiki-algolia .md-header label[for="__search"] {
+  display: none;
+}
+
+.wiki-algolia .DocSearch-Button {
+  margin: 0;
+  height: 1.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+
+.wiki-algolia .DocSearch-Button:hover,
+.wiki-algolia .DocSearch-Button:focus {
+  background: rgba(0, 212, 170, 0.12);
+  border-color: #00d4aa;
+  box-shadow: none;
+}
+
+.wiki-algolia .DocSearch-Button-Placeholder {
+  font-size: 0.8rem;
+}
+
+/* 360px header: icon only, no page-level overflow from the keys chip. */
+@media screen and (max-width: 44.984375em) {
+  .wiki-algolia .DocSearch-Button-Placeholder,
+  .wiki-algolia .DocSearch-Button-Keys {
+    display: none;
+  }
+
+  .wiki-algolia .DocSearch-Button {
+    padding: 0 0.55rem;
+    width: 2.2rem;
+    justify-content: center;
+  }
+}
