@@ -14,6 +14,7 @@ Idempotent: reuses an existing DeepSeek provider and an agent named
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -36,6 +37,8 @@ from algolia_http import (  # noqa: E402
 
 AGENT_NAME = "Seek Uplift Help Center"
 PUBLIC_JS = ROOT / "docs" / "javascripts" / "algolia-public.js"
+SEARCH_MODES = ("lunr", "keyword", "askAi")
+SEARCH_MODE_RE = re.compile(r'"searchMode"\s*:\s*"(lunr|keyword|askAi)"')
 
 INSTRUCTIONS = """You are a helpful assistant embedded in the Seek Uplift help-center wiki, a public TEST help center for a SKR-based Solana launchpad.
 
@@ -164,29 +167,65 @@ def ensure_domains(app_id: str, write_key: str, agent_id: str) -> None:
                 raise
 
 
+def read_existing_search_mode(text: str) -> str:
+    """Return a valid searchMode from public JS, defaulting to askAi.
+
+    Re-running setup must not flip an operator kill switch back on.
+    """
+    match = SEARCH_MODE_RE.search(text)
+    if match:
+        return match.group(1)
+    return "askAi"
+
+
+def public_js_body(
+    app_id: str, search_key: str, assistant_id: str, search_mode: str
+) -> str:
+    if search_mode not in SEARCH_MODES:
+        raise ValueError(f"searchMode must be one of {SEARCH_MODES}, got {search_mode!r}")
+    config = {
+        "appId": app_id,
+        "apiKey": search_key,
+        "indexName": KEYWORD_INDEX,
+        "markdownIndexName": MARKDOWN_INDEX,
+        "assistantId": assistant_id,
+        "searchMode": search_mode,
+    }
+    return (
+        "/* Public Algolia DocSearch config. Safe to commit: search-only key.\n"
+        "   Admin / write keys must never be placed here.\n"
+        "\n"
+        "   searchMode is the operator switch (commit + push to Pages):\n"
+        '     "askAi"   — DocSearch keyword search + Ask AI tab\n'
+        '     "keyword" — DocSearch keyword search only (no Ask AI tab)\n'
+        '     "lunr"    — Material MkDocs search only\n'
+        "   Keep assistantId even when searchMode is keyword or lunr so turning\n"
+        '   Ask AI back on is one field. README: "Switching search modes". */\n'
+        "window.__ALGOLIA_DOCSEARCH = "
+        + json.dumps(config, indent=2)
+        + ";\n"
+    )
+
+
 def write_public_js(app_id: str, search_key: str, assistant_id: str) -> None:
     if search_key in ("", None):
         raise SystemExit("Refusing to write an empty search key.")
-    body = (
-        "/* Public Algolia DocSearch config. Safe to commit: search-only key.\n"
-        "   Admin / write keys must never be placed here. */\n"
-        "window.__ALGOLIA_DOCSEARCH = "
-        + json.dumps(
-            {
-                "appId": app_id,
-                "apiKey": search_key,
-                "indexName": KEYWORD_INDEX,
-                "markdownIndexName": MARKDOWN_INDEX,
-                "assistantId": assistant_id,
-            },
-            indent=2,
-        )
-        + ";\n"
-    )
+    search_mode = "askAi"
+    if PUBLIC_JS.exists():
+        search_mode = read_existing_search_mode(PUBLIC_JS.read_text(encoding="utf-8"))
+        if search_mode != "askAi":
+            print(
+                f"Preserving searchMode={search_mode} from existing public JS. "
+                'Set searchMode to "askAi" in that file to turn Ask AI back on.'
+            )
+    body = public_js_body(app_id, search_key, assistant_id, search_mode)
     if "ALGOLIA_ADMIN" in body or env_write_key() in body:
         raise SystemExit("Refusing to write a write/admin key into algolia-public.js.")
     PUBLIC_JS.write_text(body, encoding="utf-8")
-    print(f"Wrote {PUBLIC_JS.relative_to(ROOT)} with assistantId={assistant_id}.")
+    print(
+        f"Wrote {PUBLIC_JS.relative_to(ROOT)} with "
+        f"assistantId={assistant_id} searchMode={search_mode}."
+    )
 
 
 def main() -> int:
