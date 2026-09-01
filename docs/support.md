@@ -76,8 +76,8 @@ If in-app chat cannot load, use **Open chat in browser** / **Open in browser**.
 ## This wiki
 
 On Android the wiki opens inside the app. In-wiki links stay in the viewer;
-links that leave this site open in the system browser. Header Back walks
-**wiki history** first, then leaves the screen.
+links that leave this site open in the system browser. Header Back leaves
+the wiki and returns to the app — it does not walk previous wiki pages.
 
 On the web, Guides & FAQ opens a **new browser tab**.
 
