@@ -215,7 +215,7 @@
     if (typeof window.fetch !== "function") return;
     watching = true;
     var orig = window.fetch;
-    window.fetch = function (input, init) {
+    var wrapped = function (input, init) {
       var pending = orig.apply(this, arguments);
       if (!isCompletionsUrl(requestUrl(input))) return pending;
       return pending.then(function (resp) {
@@ -225,6 +225,8 @@
         });
       });
     };
+    window.fetch = wrapped;
+    if (typeof globalThis !== "undefined") globalThis.fetch = wrapped;
   }
 
   ready(function () {

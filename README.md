@@ -7,8 +7,10 @@ plus a SeekUplift brand layer (dark navy, sprout teal, Space Grotesk / DM Sans,
 Token Sprout logo). Project JavaScript is limited to Algolia DocSearch / Ask
 AI. Analytics and cookie-consent plugins are OFF on purpose: the wiki renders
 inside the app's incognito WebView, where anything that touches browser
-storage misbehaves. Ask AI is optional — Material lunr search stays if Algolia
-config is missing or the widget fails to load.
+storage misbehaves. Ask AI is optional: `searchMode` in `algolia-public.js`
+is the operator switch, Material lunr stays if Algolia config is missing
+or the widget fails to load, and empty DeepSeek credits remount keyword
+search instead of leaving an Ask AI error on screen.
 
 This repo is one of the independent git repos under the
 `solana/meteora-scaffold-3` workspace root (the root itself is not a git repo).
@@ -30,8 +32,8 @@ wiki/
 │   │   ├── logo.png               # Token Sprout header mark
 │   │   └── favicon.png
 │   ├── javascripts/
-│   │   ├── algolia-public.js      # public search-only Algolia config
-│   │   └── algolia-init.js        # DocSearch v5 + Ask AI (lunr fallback)
+│   │   ├── algolia-public.js      # public search-only config + searchMode
+│   │   └── algolia-init.js        # DocSearch v5 + Ask AI (lunr / keyword fallback)
 │   ├── stylesheets/
 │   │   ├── extra.css              # SeekUplift palette, type, surfaces
 │   │   └── algolia.css            # DocSearch header slot
@@ -146,12 +148,68 @@ A reindex without a Pages deploy updates hits but not the widget or
 
 | Public config in `algolia-public.js` | Header search |
 |---|---|
-| Missing `appId` / search key / `indexName` | Material lunr (always built) |
-| Those three set, `assistantId` empty | DocSearch v5 keyword search |
-| `assistantId` set (Agent Studio agent) | DocSearch v5 keyword search **and** Ask AI |
+| `searchMode: "lunr"` (keys may stay) | Material lunr (always built) |
+| Missing `appId` / search key / `indexName` | Material lunr |
+| `searchMode: "keyword"` | DocSearch v5 keyword search, no Ask AI tab |
+| `searchMode: "askAi"` (needs `assistantId`) | DocSearch v5 keyword search **and** Ask AI |
+| `searchMode` omitted, `assistantId` set | Same as `"askAi"` |
+| `searchMode` omitted, `assistantId` empty | Same as `"keyword"` |
 | DocSearch CDN or Algolia API unreachable | Lunr (init script no-ops on failure) |
+| Ask AI completion returns quota/auth error | Keyword search for the rest of that tab |
 
 Ask AI is the assistant tab inside the DocSearch modal, not a second widget.
+Do not empty `assistantId` to turn Ask AI off — change `searchMode` so
+turning it back on is one field.
+
+### Switching search modes
+
+Edit `docs/javascripts/algolia-public.js`, commit, push `main` (or run
+**Build and deploy wiki to GitHub Pages**). Already-open tabs keep the old
+JS until refresh. This is the site-wide switch; there is no Algolia-dashboard
+toggle that hides the widget.
+
+**Ask AI off, keep Algolia keyword search** (typical when DeepSeek credits
+are gone and you do not want anyone to hit the Ask AI tab):
+
+```js
+"searchMode": "keyword"
+```
+
+**MkDocs / Material lunr only** (no Algolia widget):
+
+```js
+"searchMode": "lunr"
+```
+
+**Ask AI back on** after topping up DeepSeek or finishing the outage:
+
+```js
+"searchMode": "askAi"
+```
+
+Leave `appId`, `apiKey`, `indexName`, `markdownIndexName`, and `assistantId`
+in place. `scripts/setup_algolia.py` **preserves** `searchMode` if it is
+already `keyword` or `lunr`, so a setup re-run does not silently re-enable
+Ask AI.
+
+Do **not** unpublish the Agent Studio agent or rotate the DeepSeek key as
+the kill switch — the Ask AI tab still renders and then errors. Do **not**
+drop `ALGOLIA_WRITE_API_KEY` from Actions; that only skips reindexing.
+
+**Automatic fallback** (no deploy): DocSearch Ask AI posts to Agent Studio
+`/completions`. If that returns 401/402, a non-Cloudflare 403, or a 4xx/5xx
+body that looks like quota/credits/billing, the init script destroys the
+Ask AI widget and remounts keyword search. `sessionStorage` remembers that
+for the tab so later wiki pages in the same visit never open the Ask AI
+tab. The in-app incognito WebView may refuse storage; then the remount
+still holds for the current page only.
+
+That fallback cannot hide the very first failed Ask AI turn (the completion
+has to fail before we know credits are gone). It also cannot change what
+other visitors see — only `searchMode` + a Pages deploy does that. Prefer
+the operator switch as soon as you know DeepSeek is empty. Keyword search
+does not use DeepSeek, so falling all the way back to lunr on a credit
+error would throw away working search.
 
 ### Secrets vs public config
 
@@ -161,6 +219,7 @@ Safe to commit (`docs/javascripts/algolia-public.js`):
 - **Search-only** API key (ACL: `search`)
 - Index names `help_center` and `help_center_markdown`
 - Agent Studio **agent ID** (`assistantId`), once setup has created it
+- `searchMode` (`askAi` / `keyword` / `lunr`)
 
 Never commit, never put in `mkdocs.yml` or the JS files:
 
@@ -193,7 +252,8 @@ Local / CI environment names:
    ```
 
 4. Commit the updated `docs/javascripts/algolia-public.js` (it now
-   contains `assistantId`). Push so Pages serves the widget with Ask AI.
+   contains `assistantId` and `searchMode`). Push so Pages serves the
+   widget with Ask AI, unless you left `searchMode` at `keyword` or `lunr`.
 5. In GitHub → `seekuplift/help-center-wiki` → Settings → Secrets and
    variables → Actions, add:
 
@@ -268,8 +328,13 @@ not `http://127.0.0.1:8000`.
   log. Pages succeeded; search was not refreshed.
 - **`site_url` / Pages path prefix wrong** — hits 404. Reindex after
   fixing `site_url`.
-- **`assistantId` empty in the committed public JS** — no Ask AI tab.
+- **`searchMode` is `"keyword"` or `"lunr"`** — Ask AI tab is off until
+  you set `"askAi"` and redeploy. `assistantId` can stay in the file.
+- **`assistantId` empty while `searchMode` is `"askAi"`** — no Ask AI tab.
   Keyword DocSearch still mounts if the other public fields are set.
+- **Ask AI shows an error then the tab disappears** — DeepSeek quota/auth
+  failed; this tab now uses keyword search. Set `searchMode` to
+  `"keyword"` and deploy so every visitor skips Ask AI.
 - **New markdown page not in `nav:`** — page is reachable and lunr-indexed
   at build; Algolia lvl0 falls back to `"Help Center"` until it is in
   `nav` and reindexed.

@@ -6,7 +6,8 @@
 # (docs/javascripts/algolia-*.js). Analytics and cookie-consent plugins
 # stay OFF: the wiki is rendered inside the app's incognito WebView, where
 # anything that touches browser storage misbehaves. Ask AI is gated on
-# public config; if it is missing or fails to load, Material lunr stays.
+# searchMode / public config; quota errors remount keyword search. If
+# config is missing or the widget fails to load, Material lunr stays.
 #
 # Ticket HC-2 (redesign/launchpad-mobile-redesign/tickets-help-center.md).
 # Design spec: docs/superpowers/specs/2026-08-27-in-app-help-center-design.md
@@ -48,11 +49,11 @@ extra_css:
   - stylesheets/algolia.css
 
 # Algolia DocSearch v5. algolia-public.js holds the public search-only config
-# (appId, search key, index names, optional assistantId). Init mounts keyword
-# search when the first three are set, and Ask AI when assistantId is set.
-# If config or the CDN fails, Material lunr stays. Write/admin keys must
-# never appear here or in those files. See README.md "Algolia search and
-# Ask AI — deployment".
+# (appId, search key, index names, assistantId, searchMode). searchMode is the
+# operator switch: lunr | keyword | askAi. Init remounts keyword search if
+# Ask AI completions fail with a quota/auth error. If config or the CDN
+# fails, Material lunr stays. Write/admin keys must never appear here or in
+# those files. See README.md "Switching search modes".
 extra_javascript:
   - javascripts/algolia-public.js
   - javascripts/algolia-init.js
