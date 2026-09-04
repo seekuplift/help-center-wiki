@@ -62,8 +62,11 @@ send pushes. See [Communities](communities.md).
 ## Directed funds (honest status)
 
 Directed’s 0.525% of volume is held for the project (idea) or the causes a
-meme backs. **Today it accumulates.** Milestone / cause spend is not live. We
-do not call those funds locked.
+meme backs. **Today, that share is swept and tracked manually by the team** —
+not by an on-chain program. Automatic, trustless on-chain distribution is the
+goal we're building toward, not something live yet. Milestone / cause spend is
+not live. We do not call those funds locked.
 
-When release ships, it will be documented here and on [Fees](fees.md). Until
-then, do not promise supporters that a treasury spend already happens.
+When automatic on-chain distribution ships, it will be documented here and on
+[Fees](fees.md). Until then, do not promise supporters that a treasury spend
+already happens.

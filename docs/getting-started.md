@@ -3,8 +3,8 @@
 --8<-- "includes/test-banner.md"
 
 This page walks a first session: accept Privacy & Terms, connect a wallet, get
-SKR if you need it, and make a small buy. Nothing here is financial advice —
-only you decide whether to sign a transaction.
+the quote token if you need it, and make a small buy. Nothing here is
+financial advice — only you decide whether to sign a transaction.
 
 ## 1. First launch
 
@@ -62,26 +62,29 @@ tapped — Buy, Launch, Claim, Sign in, and so on.
 
 More detail: [Wallets](wallets.md).
 
-## 4. Get SKR (the quote token)
+## 4. Get the quote token
 
-Launchpad buys on the curve pay in **SKR**, not SOL.
+Launchpad buys on the curve pay in the launchpad's **quote token** (SKR
+today), not SOL.
 
-- SOL still pays network fees and is what you swap *into* SKR.
-- On **Account**, SOL and SKR sit above your launchpad holdings. Tap **SKR** to
-  open **Get SKR** (a SOL → SKR swap).
+- SOL still pays network fees and is what you swap *into* it.
+- On **Account**, SOL and the quote token sit above your launchpad holdings.
+  Tap it to open **Get the quote token** (a SOL → quote-token swap).
 - Max leaves a small SOL reserve so you can still pay fees.
 
-If you tap Buy with only SOL, the trade sheet can run **Get SKR & Buy**: a SOL
-→ SKR swap, then the token buy. You approve **each** step in your wallet. That
-is two signatures, on purpose.
+If you tap Buy with only SOL, the trade sheet can run a combined swap-then-buy
+flow (shown as **Get SKR & Buy** today): a SOL → quote-token swap, then the
+token buy. You approve **each** step in your wallet. That is two signatures,
+on purpose.
 
 ## 5. Find a token and buy
 
 1. On **Home**, stay on **Bonding** to see coins still on the curve. **New** is
    the last 24 hours on-curve. **Graduated** have left the curve.
 2. Open a token. Buy / Sell sits under the header.
-3. Enter an amount in SKR, or use the 10 / 25 / 50 / 75% chips. **Max** uses
-   your full SKR (buy) or the exact token holding (sell).
+3. Enter an amount in the quote token, or use the quick percentage chips.
+   **Max** uses your full quote-token balance (buy) or the exact token
+   holding (sell).
 4. Review the wallet prompt. Cancel there and **no funds move**.
 
 !!! warning "The first ~10 minutes are not the 1.25% fee"

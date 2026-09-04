@@ -48,7 +48,7 @@ Along with your notes (and email if you added one):
 - Live stream health
 - Backend URL and Solana cluster
 - Feature flags in effect
-- The 40 most recent diagnostic events (secrets already redacted)
+- Recent diagnostic events (secrets already redacted)
 - Timestamp
 - Optional screenshot (Android) and extra images you attached
 

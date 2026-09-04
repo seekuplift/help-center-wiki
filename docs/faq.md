@@ -21,7 +21,8 @@ On Seeker, the built-in wallet is **Seeker Wallet**. → [Wallets](wallets.md)
 
 **The app asked me to sign a message, not a transaction. Is that a drain?**
 No. **Sign in** proves you hold the address. It does not move funds. A buy,
-sell, launch, claim, or Get SKR prompt does. Read the wallet screen.
+sell, launch, claim, or a quote-token swap prompt does. Read the wallet
+screen.
 → [Wallets](wallets.md)
 
 **Will a screen pop my wallet by itself?**
@@ -29,9 +30,10 @@ No. Every signature starts from a tap you made.
 
 ## Money and fees
 
-**Why SKR, not SOL, to buy?**
-Launchpad pools are **SKR-quoted**. SOL pays gas and is what you swap into
-SKR. → [Account](account.md) · [Buy and sell](trading.md)
+**Why not just buy with SOL?**
+Launchpad pools are quoted in a separate token (SKR today), not SOL. SOL pays
+gas and is what you swap into it. → [Account](account.md) ·
+[Buy and sell](trading.md)
 
 **Is the fee “50% of trading fees”?**
 No. After the anti-sniper window the bonding-curve fee is **1.25% of volume**.

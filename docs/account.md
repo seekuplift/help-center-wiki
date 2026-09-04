@@ -9,7 +9,7 @@ Security Policy, and Legal while disconnected.
 ## Launchpad balance
 
 The headline is **LAUNCHPAD BALANCE** — the USD value of tokens you hold that
-were launched on Seek Uplift. It does **not** include SOL or SKR.
+were launched on Seek Uplift. It does **not** include SOL or the quote token.
 
 When the app can quote an exit, the figure is **estimated proceeds if sold
 now**, not a mark-to-market fantasy:
@@ -25,14 +25,14 @@ now**, not a mark-to-market fantasy:
 Tap the small link under the amount to open the connected wallet app (Android)
 or Solscan (web / fallback).
 
-## SOL, SKR, and holdings
+## SOL, the quote token, and holdings
 
 Above **Your launchpad holdings**:
 
 | Row | What it is |
 |---|---|
 | **Solana (SOL)** | Native balance. Pays network fees. |
-| **SKR** | Quote token for launchpad buys. Tap the row to **Get SKR**. |
+| **Quote token** (shown as **SKR** today) | Used for launchpad buys. Tap the row to swap SOL into it. |
 
 Holdings are the coins you bought or launched. A row with high expected price
 impact leads with an estimated exit and keeps market value on a second line.
@@ -41,13 +41,13 @@ impact leads with an estimated exit and keeps market value on a second line.
 Pull to refresh if a row looks stale. Disconnecting hides wallet-scoped data;
 it does not destroy on-chain balances.
 
-## Get SKR
+## Get the quote token
 
-Tap the SKR row.
+Tap the quote-token row.
 
-1. Choose how much SOL to swap (10 / 25 / 50 / 75% chips, or Max).
-2. **Max leaves a small SOL reserve** (~0.005 SOL) so the swap and a later buy
-   can still pay fees. Max is never your entire SOL balance.
+1. Choose how much SOL to swap (quick percentage chips, or Max).
+2. **Max leaves a small SOL reserve** so the swap and a later buy can still pay
+   fees. Max is never your entire SOL balance.
 3. Approve the Jupiter swap in your wallet.
 
 Success offers a Solscan link. If a previous swap is still processing, wait and
@@ -72,16 +72,14 @@ retry — starting over can swap twice.
 
 ## Notifications
 
-In Settings you can opt into alerts such as:
+**Settings** currently has one notification toggle: **News**. Permission is
+requested only when you tap to enable it.
 
-- A token you hold **graduates**
-- Holder rank after a buy
-- Curve milestones
-- News
-
-Permission is requested only when you tap to enable it. If the OS has blocked
-notifications, the row should take you to system settings. The app stays fully
-usable with notifications off.
+The app can also alert you when a token you hold **graduates**, on holder rank
+after a buy, or on curve milestones — those ship on by default today and don't
+have their own Settings toggle yet. To stop all Seek Uplift notifications,
+turn them off for the app at the OS level. The app stays fully usable with
+notifications off.
 
 ## Appearance
 

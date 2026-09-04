@@ -13,7 +13,7 @@ anonymized themes only.
 Follow from the token page, or from the prompt after a **buy**.
 
 The why-prompt is skippable. Be specific if you fill it in — that is what
-personalized updates match on. You can type or tap **Tap to speak it instead**.
+personalized updates match on.
 
 After you follow, the confirmation points you at the project’s public socials
 for the firehose. In-app, you are not subscribed to every post.

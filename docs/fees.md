@@ -8,10 +8,11 @@ This page is the source of truth for that split.
 
 It is also what **Review fees** in the Launch wizard opens.
 
-!!! warning "Phase A — funds accumulate; they are not locked"
-    Directed funds **accumulate** in a dedicated, publicly-auditable treasury.
-    This page does **not** claim those funds are locked, and milestone / cause
-    **release is the intended path**, not a live spend mechanism today.
+!!! warning "Phase A — manual distribution today; automatic on-chain routing is the plan"
+    Directed’s share is currently swept and distributed **manually by the
+    team**, not by an on-chain program yet. This page does **not** claim those
+    funds are locked, and milestone / cause **release is the intended path**,
+    not a live spend mechanism today.
 
 ## Post-decay bonding-curve fee (1.25% of traded volume)
 
@@ -80,12 +81,15 @@ pointed at the project (idea) or the causes a meme backs.
   are met.
 - **Meme:** held for exceptional causes the meme backs.
 
-Today those funds **accumulate** in a dedicated, publicly-auditable treasury.
-Milestone / cause spend is **not live**. We do **not** claim the funds are
-locked.
+Today, the 1.25% fee and the creator’s 16% share are collected and split
+automatically on-chain. The rest — including the Directed / SeekUplift split —
+is currently swept and divided **manually by the team**, not by an automatic
+on-chain program. A fully automatic, on-chain distribution mechanism is the
+direction we're building toward, not something live today. Milestone / cause
+spend is **not live**. We do **not** claim the funds are locked.
 
-Creators still claim **their** 0.20% of volume from **Rewards**. That path is
-live. See [Creators](creators.md).
+Creators still claim **their** 0.20% of volume from **Rewards**. That claim
+path *is* on-chain and automatic today. See [Creators](creators.md).
 
 ## Launch cost (not a trading fee)
 

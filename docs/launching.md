@@ -57,7 +57,8 @@ Required fields come first, then optional, for every type.
   fields)
 
 Then **CREATOR FIRST BUY** (optional, but highlighted). Fresh forms default to
-**100 SKR** so the pool is not launched empty. Clear the amount to skip.
+**100 units of the quote token** (SKR today) so the pool is not launched
+empty. Clear the amount to skip.
 
 - Live `≈ $…` conversion while you type
 - Live `≈ N tokens · P% of supply` estimate

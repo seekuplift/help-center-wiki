@@ -61,7 +61,7 @@ Read it. Typical prompts:
 |---|---|
 | Connect / authorize the app | No |
 | Sign in (message) | No |
-| Buy / sell / launch / claim / Get SKR | **Yes** — review amounts |
+| Buy / sell / launch / claim / a quote-token swap | **Yes** — review amounts |
 
 Cancel or reject a transaction prompt: **no funds move**. If a stale approval
 is still sitting in the wallet, close it before you retry.

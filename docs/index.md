@@ -41,8 +41,8 @@ If you cannot open the app, you can read this wiki in any browser at
 ## What you can do
 
 - **Browse** live launchpad tokens on Home — New, Bonding, or Graduated.
-- **Buy and sell** with SKR. If you only hold SOL, the trade sheet can swap
-  SOL → SKR first, then buy.
+- **Buy and sell** with the launchpad's quote token (SKR today). If you only
+  hold SOL, the trade sheet can swap into it first, then buy.
 - **Launch** an idea or a meme. A portion of bonding-curve trading fees is
   directed to the project or the causes a meme backs.
 - **Follow** a coin and say why. You get personalized updates, not a firehose.
@@ -55,7 +55,7 @@ If you cannot open the app, you can read this wiki in any browser at
 |---|---|
 | [Getting started](getting-started.md) | Open the app for the first time, connect, and make a first buy |
 | [Wallets](wallets.md) | Connect, switch, or disconnect a Solana wallet |
-| [Account](account.md) | Read your launchpad balance, holdings, and Get SKR |
+| [Account](account.md) | Read your launchpad balance, holdings, and get the quote token |
 | [Buy and sell](trading.md) | Trade on the curve or after graduation |
 | [Fees](fees.md) | See the 1.25% bonding-curve fee split |
 | [Launch a coin](launching.md) | Plant an idea or a meme |
@@ -80,6 +80,7 @@ If you cannot open the app, you can read this wiki in any browser at
   (fees, claims, payouts) reads on-chain state, not the chart.
 
 !!! note "Directed funds — Phase A"
-    Directed’s share of bonding-curve volume **accumulates** in a dedicated,
-    publicly-auditable treasury. Milestone and cause **spend is not live**.
-    We do not claim those funds are locked. Details: [Fees](fees.md).
+    Directed’s share of bonding-curve volume is tracked and distributed
+    **manually by the team** today — not by an on-chain program yet.
+    Milestone and cause **spend is not live**. We do not claim those funds
+    are locked. Details: [Fees](fees.md).
