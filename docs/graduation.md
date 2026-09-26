@@ -12,7 +12,7 @@ Home tabs: **New** (last 24h, on-curve) · **Bonding** (all on-curve) ·
 ## The brief untradeable window
 
 Between curve-full and pool-migrated, neither route works. If a trade
-fails with **pool has graduated** or **no route**: close the sheet, pull
+says **This pool has graduated** or **No route found**: close the sheet, pull
 to refresh, reopen (route should read **Jupiter**). Do not spam retries.
 
 ## Fees after graduation
@@ -20,4 +20,5 @@ to refresh, reopen (route should read **Jupiter**). Do not spam retries.
 The same **30 / 30 / 40** split keeps applying after graduation (via the
 locked-liquidity shares), at the coin's after-graduation rate — see
 [Fees](fees.md). Creator fees earned on the curve stay claimable from
-[Rewards](creators.md).
+[Rewards](creators.md); after-graduation fees are not claimable in the
+app yet.

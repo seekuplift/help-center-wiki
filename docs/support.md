@@ -6,15 +6,17 @@ From the help icon on every screen:
 
 | Row | Use it when |
 |---|---|
+| **Legal removal request** | Content should be taken down |
 | **Guides & FAQ** | Learn how something works (this wiki) |
 | **Report a bug** | Something broke (no sign-in needed) |
-| **Contact support** | You need a human (ticket or live chat) |
+| **Create a support ticket** / **Open chat** | You need a human |
 
 ## Report a bug
 
 Describe what went wrong (required, up to 4,000 chars), optionally add
 email and photos, then **Send report**. Reports include app version,
-screen, wallet state, and redacted diagnostics (rate-limited, currently 5
+screen, your public wallet address, an install ID, feature flags, and
+redacted diagnostics (rate-limited, currently 5
 per hour). Never put seed phrases or keys in notes or screenshots.
 
 On Android the wiki opens in-app (in-wiki links stay inside; Back leaves

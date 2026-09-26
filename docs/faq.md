@@ -10,13 +10,13 @@ Project or cause 40%** — on the curve and after graduation. The rate
 depends on the coin's fee tier. → [Fees](fees.md)
 
 **I bought in the first minutes and the fee was huge.**
-The decay tier opens at **99%** and falls to its base over ~10 minutes
+The 1.25% → 0.30% tier opens at **99%** and falls to its base over ~10 minutes
 to deter snipers. Flat tiers charge their flat rate from the start. →
 [Fees](fees.md)
 
 **How do I claim creator fees?**
-Account → **Rewards** → Claim. That is your 30%, not the project-or-cause
-share. → [Creators](creators.md)
+Account → **Rewards** → Claim. That is your 30% of on-curve fees, not the
+project-or-cause share. → [Creators](creators.md)
 
 **What does Launch cost ≈0.013 SOL mean?**
 A one-time rent deposit, not a trading fee. → [Launch a coin](launching.md)
@@ -24,7 +24,7 @@ A one-time rent deposit, not a trading fee. → [Launch a coin](launching.md)
 ## Using the app
 
 **Why not just buy with SOL?**
-Curve pools quote in SKR, not SOL. SOL pays gas and is what you swap from.
+Current pools quote in SKR, not SOL. SOL pays gas and is what you swap from.
 → [Buy and sell](trading.md)
 
 **Do I need a wallet to browse?**
@@ -41,8 +41,8 @@ sell, launch, claim, and swaps move funds. Read the prompt. →
 **Sell is red — is that an error?** No, red marks Sell so it never looks
 like Buy.
 
-**I sold everything and got unfollowed.** A full sell unfollows with
-**Undo**; partial sells do not. → [Communities](communities.md)
+**I sold everything and got unfollowed.** Selling out (≤ $0.10 left)
+unfollows with **Undo**. → [Communities](communities.md)
 
 **Can I change the name or ticker later?** No. Description, image, and
 socials are editable by the creator wallet.
@@ -55,5 +55,5 @@ device**.
 **Someone asked for my seed phrase.** It is not Seek Uplift. Never share
 it. → [Privacy and safety](privacy.md)
 
-**What does a bug report send?** Notes, diagnostics, screenshot, optional
-email — no keys. → [Getting help](support.md)
+**What does a bug report send?** Notes, diagnostics, screenshot, your
+public wallet address, optional email — no keys. → [Getting help](support.md)

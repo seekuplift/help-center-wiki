@@ -15,8 +15,9 @@ Terms**. A version bump can ask you to review again.
 
 Wallet state and public address, balances and signatures, launch content
 and images, reports, bug reports (see [Getting help](support.md)),
-support messages, diagnostics — and analytics only if you allow it (off
-until you accept; toggle in Privacy Center).
+support messages, diagnostics, crash reports, and analytics (on after you
+accept unless you turn it off or turn on Do Not Sell or Share — both in
+Privacy Center).
 
 Reports are **wallet-attributed** for abuse prevention. Uploads pin via
 the backend and, once on-chain, can be public and permanent.
@@ -28,6 +29,7 @@ the backend and, once on-chain, can be public and permanent.
 - **Not financial advice.** Mainnet only.
 - External links from token metadata ask you to confirm the host first.
 
-Privacy Center handles analytics choices, data export, and deletion.
+Privacy Center handles analytics choices, local data export, and backend
+deletion requests (by email).
 California rights (know, delete, correct, opt out) start there or via
-Contact support.
+support.

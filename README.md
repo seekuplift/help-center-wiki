@@ -137,6 +137,27 @@ wrong, or taken down without notice.
 web with `npx expo export -p web --clear` (Metro's transform cache ignores env).
 `mkdocs.yml` `site_url` is already set to the same origin.
 
+**Activating the wiki in shipped APKs is an EAS Update, not an app release.** The
+MVP APK bakes no wiki URL, so the in-app **Guides & FAQ** row (and the launch
+flow's **Review fees** link) stays hidden until we publish the flip:
+
+```sh
+eas update --channel production --environment production --message "enable help-center wiki"
+```
+
+Operational gotchas:
+
+- The URL must be set as an **EAS environment variable** (environment
+  `production`) for the bundle build — local `.env` is gitignored and never
+  reaches EAS. An update built without it silently re-hides the row (no error).
+- Sign the update per HITL-10 if the APK pins the code-signing cert.
+- The app's `runtimeVersion` policy is `appVersion`: the update reaches only
+  binaries on the same `expo.version` (do not bump for an update), and the next
+  new APK must bake the URL into its embedded bundle.
+
+Full procedure: `redesign/launchpad-mobile-redesign/docs/prod/operations-runbook.md`
+→ *Releasing an update*.
+
 ## Algolia search and Ask AI — deployment
 
 Search is two independent surfaces. GitHub Pages ships HTML/JS. Algolia holds

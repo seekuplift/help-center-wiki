@@ -8,7 +8,7 @@ coin. Keep that wallet — name and symbol can never change.
 ## Claim creator fees
 
 **Account → Rewards → Claim** (or **Claim all**). This is your **30%**
-share (after Meteora's 20%) — not the project-or-cause share. Claiming
+share of on-curve fees (after Meteora's 20%) — not the project-or-cause share. Claiming
 is an on-chain transaction. See [Fees](fees.md).
 
 ## Edit coin details

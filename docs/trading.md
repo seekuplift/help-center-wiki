@@ -2,7 +2,7 @@
 
 --8<-- "includes/test-banner.md"
 
-Open any token and use **Buy / Sell** under the header. Not a
+Open any token and use **Buy** or **Sell** under the header. Not a
 recommendation to trade.
 
 ## Pay in SKR

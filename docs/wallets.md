@@ -13,7 +13,7 @@ built-in Seeker wallet is **Seeker Wallet**); on web, use a
 wallet-standard browser wallet. No wallet yet? Screens recommend
 **Jupiter Wallet** — a suggestion, not a requirement.
 
-Some actions (posting, follows, creator dashboard) also need a
+Some actions (posting, follows, token reports, creator dashboard) also need a
 **sign-in**: a message signature that moves no funds. If the session
 expired, tap the action again.
 

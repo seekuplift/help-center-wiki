@@ -17,11 +17,12 @@ Both share the same split: **Creator 30% · SeekUplift 30% · Project or
 cause 40%** (after Meteora's 20%). Full table: [Fees](fees.md).
 **Review fees** on that step opens the Fees page.
 
-Startup create is not offered in the wizard.
+Startup create is currently turned off.
 
 ## Fee tier
 
-Pick a **fee tier** (decay or flat). It sets the coin's trading fee
+Where more than one is offered, pick a **fee tier** (**1.25% → 0.30%**,
+**Flat 5%**, or **Flat 10%**). It sets the coin's trading fee
 forever — **this choice is permanent**. Detail lines show the curve rate
 and the after-graduation rate before you confirm.
 
@@ -30,9 +31,10 @@ and the after-graduation rate before you confirm.
 Required: logo, name (3–32 chars), symbol (max 10), description — plus
 use case, problem, and prototype link for ideas.
 
-Optional: **creator first buy** (defaults to 100 SKR so the pool never
-starts empty; clear to skip), website, X, and an optional **donation**
-(cause basket or one Giveth project).
+Optional: **creator first buy** (defaults to 100 SKR to seed your own
+position; clear to skip; not offered on every config), website, X, and —
+where the config supports it — a **donation** (cause basket or one
+Giveth project).
 
 Uploads pin **before** you sign and may become public permanently. No gas
 is spent on upload.
@@ -46,4 +48,4 @@ only if the config charges one.
 After launch: share the mint, trading starts on the curve (the opening
 fee depends on the tier — see [Fees](fees.md)), creator fees accrue to
 **Account → Rewards**, and only the creator wallet can edit description,
-image, and socials.
+image, and socials (on configs that grant it update authority).

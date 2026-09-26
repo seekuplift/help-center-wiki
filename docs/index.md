@@ -4,7 +4,7 @@
     This wiki is a **public test** so the in-app Help → Guides & FAQ path
     can be exercised end to end. Content may be incomplete, inaccurate, or
     removed without notice. For anything that matters, use **Report a bug**
-    or **Contact support** from the help menu.
+    or **Create a support ticket** from the help menu.
 
 Seek Uplift is a **SKR-based launchpad that shares value out.** Trading
 fees go to creators, SeekUplift, and the project or causes a coin backs —
