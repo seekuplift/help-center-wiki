@@ -26,7 +26,8 @@ happens.
 
 If the coin launched as **decide later**, pick the destination from the
 Creator Dashboard (connect the creator wallet, sign the choice) within
-**90 days** of launch. If it launched naming an **X or Reddit account**,
+**90 days** of launch. If it launched naming an **X or Reddit account** (deferred — not
+selectable at launch yet),
 that account claims the choice with **Claim as @handle** on the coin
 page, then picks a cause, project, or the managed fund within **30 days**.
 Anything still undecided at the deadline **falls back to the managed

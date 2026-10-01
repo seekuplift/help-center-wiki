@@ -53,7 +53,7 @@ is separate.
 - **Decide later** — held until the creator picks from the Creator
   Dashboard, or falls back to the managed fund at the **90-day**
   deadline.
-- **X / Reddit account** — held until the named account claims and picks
+- **X / Reddit account** (deferred) — held until the named account claims and picks
   (or the **90-day** claim deadline passes, then the managed fund).
 - **DAO** — planned, not selectable yet.
 
