@@ -21,6 +21,26 @@ project-or-cause share. → [Creators](creators.md)
 **What does Launch cost ≈0.013 SOL mean?**
 A one-time rent deposit, not a trading fee. → [Launch a coin](launching.md)
 
+## Cause funding
+
+**What is the managed fund?**
+The default destination for a meme coin's 40% project-or-cause share,
+and the fallback for anything undecided at the deadline. It is spent at
+SeekUplift's discretion and every payout is published — it is never a
+guaranteed donation to a specific cause. The app's **Fund page** shows
+the public ledger. → [Launch a coin](launching.md)
+
+**Why is the DAO option not available?**
+Decentralized cause governance is planned, with no date: it ships once
+the safeguards exist that make sure the funds can only reach causes.
+→ [Launch a coin](launching.md)
+
+**Can I change my choice?**
+No, once it's final. A decide-later coin can still be picked within
+**90 days** of launch, and a claimed X/Reddit coin within the
+claimant's **30-day** window — after that the choice (or the fallback
+to the managed fund) is permanent. → [Creators](creators.md)
+
 ## Using the app
 
 **Why not just buy with SOL?**

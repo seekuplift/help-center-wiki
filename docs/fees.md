@@ -43,3 +43,21 @@ is separate.
   automatic, not locked, spend not live.
 - Not part of this split: SOL gas, launch costs, DAMM v2 LP mechanics
   outside the fee above.
+
+## What the 40% share does in each cause funding mode
+
+- **Managed fund** — held in the fund vault; see the **Fund page** in the
+  app for the public ledger of contributions and disbursements.
+- **Curated cause / Giveth project** — earmarked for the named cause or
+  project.
+- **Decide later** — held until the creator picks from the Creator
+  Dashboard, or falls back to the managed fund at the **90-day**
+  deadline.
+- **X / Reddit account** — held until the named account claims and picks
+  (or the **90-day** claim deadline passes, then the managed fund).
+- **DAO** — planned, not selectable yet.
+
+The managed fund is spent at SeekUplift's discretion and every payout is
+published — it is never a guaranteed donation to a specific cause. Idea
+coins have their own funding modes; a cause is never an idea coin's
+destination.
