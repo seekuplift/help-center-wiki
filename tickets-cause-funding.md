@@ -1,7 +1,7 @@
 # Tickets: Cause funding modes — help-center copy
 
-Status: filed 2026-09-28; the source spec was human-reviewed and approved 2026-09-28. 1 ticket, not
-started.
+Status: implemented 2026-10-01 (commit `22f6bab`; tbd/x/reddit availability corrected in
+`69dafbf`). The source spec was human-reviewed and approved 2026-09-28. 1 ticket, done.
 
 Source spec: `../docs/superpowers/specs/2026-09-28-cause-funding-modes-design.md`
 (workspace-local). App half: `../redesign/launchpad-mobile-redesign/specs/tickets-cause-funding.md`.
