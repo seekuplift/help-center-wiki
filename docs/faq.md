@@ -5,17 +5,20 @@
 ## Fees
 
 **How are trading fees split?**
-Meteora takes 20% first. The rest: **Creator 30% · SeekUplift 30% ·
-Project or cause 40%** — on the curve and after graduation. The rate
-depends on the coin's fee tier. → [Fees](fees.md)
+Meteora takes 20% first. On today's live config the rest splits
+**Creator 16% · partner wallet 84%** — the team distributes the partner
+share manually to SeekUplift and the project or cause. New configs
+rolling out change it to **Creator 30% · SeekUplift 30% · Project or
+cause 40%**. → [Fees](fees.md)
 
 **I bought in the first minutes and the fee was huge.**
-The 1.25% → 0.30% tier opens at **99%** and falls to its base over ~10 minutes
-to deter snipers. Flat tiers charge their flat rate from the start. →
+The curve fee opens at **99%** and falls to its base over ~10 minutes
+to deter snipers (base is 1.25% on today's config). →
 [Fees](fees.md)
 
 **How do I claim creator fees?**
-Account → **Rewards** → Claim. That is your 30% of on-curve fees, not the
+Account → **Rewards** → Claim. That is your creator share of on-curve
+fees — 16% of the post-Meteora remainder on today's config — not the
 project-or-cause share. → [Creators](creators.md)
 
 **What does Launch cost ≈0.013 SOL mean?**
@@ -28,7 +31,7 @@ Yes, on fee-bearing tokens it's net. → [Buy and sell](trading.md)
 ## Cause funding
 
 **What is the philanthropic fund?**
-The default destination for a meme coin's 40% project-or-cause share,
+The default destination for a meme coin's project-or-cause share,
 and the fallback for anything undecided at the deadline. It is spent at
 SeekUplift's discretion and every payout is published — it is never a
 guaranteed donation to a specific cause. The app's **Philanthropic
@@ -59,7 +62,8 @@ Current pools quote in SKR, not SOL. SOL pays gas and is what you swap from.
 
 **Do I need a wallet to browse?**
 No — browsing is open. Buying, selling, launching, claiming, following,
-posting, and reporting need one. → [Getting started](getting-started.md)
+posting, and token/post reports need one. **Bug reports don't** — see
+[Getting help](support.md). → [Getting started](getting-started.md)
 
 **A screen popped my wallet — did I get drained?**
 No screen signs by itself. **Sign in** is a message (no funds move); buy,

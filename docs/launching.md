@@ -13,18 +13,24 @@ you sign.
 | **An idea** | The project |
 | **A meme with impact** | Exceptional causes the meme backs |
 
-Both share the same split: **Creator 30% · SeekUplift 30% · Project or
-cause 40%** (after Meteora's 20%). Full table: [Fees](fees.md).
+On today's live config the post-Meteora fee splits **Creator 16% ·
+partner wallet 84%** — the team distributes the partner share manually
+to SeekUplift and the project or cause. New configs rolling out change
+it to **Creator 30% · SeekUplift 30% · Project or cause 40%**. Full
+table: [Fees](fees.md).
 Where shown, **Review fees** on that step opens the Fees page.
 
-Startup create is currently turned off. Idea, startup, and meme launches — and
-idea/startup and stock-quoted trading — are also unavailable in some regions:
-the option stays visible but disabled, with the reason underneath. See
+Startup create is currently turned off. Idea and startup launches and
+trading — and stock-quoted create/trade — are also unavailable in some
+regions: the option stays visible but disabled, with the reason
+underneath. Meme is not region-gated. See
 [Privacy and safety](privacy.md).
 
 ## Fee tier
 
-Where more than one is offered, pick a **fee tier** (**1.25% → 0.30%**,
+The live config launches every coin on one schedule — **99% → 1.25%**
+anti-sniper decay, then flat 1.25% — so no tier picker shows. Where a
+config offers more than one, pick a **fee tier** (**1.25% → 0.30%**,
 **Flat 1.25%**, **Flat 5%**, or **Flat 10%**, plus cause-only variants on
 some configs). It sets the coin's trading fee
 forever — **this choice is permanent**. Detail lines show the curve rate
@@ -46,7 +52,7 @@ one, just tap retry. Uploads are limited (about 10 per hour).
 
 ## Cause funding mode (meme coins)
 
-Pick where the coin's **40% project-or-cause share** goes. The
+Pick where the coin's **project-or-cause share** goes. The
 **Philanthropic fund** is the default and preselect. The other live
 options are a **curated cause**, a **specific Giveth project**, and
 **decide later**.
@@ -74,7 +80,7 @@ lands. Review & launch restates your pick before you sign.
 
 ## Idea funding mode (idea coins)
 
-Pick where the coin's **40% idea share** goes. **Direct payout** is the
+Pick where the coin's **idea share** goes. **Direct payout** is the
 default — paid to a Solana address you name at launch. Live alternatives:
 **decide later** (you pick the final mode within **90 days**, else
 community takeover) and an **X or Reddit account** — the choice locks to

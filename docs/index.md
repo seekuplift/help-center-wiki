@@ -19,7 +19,7 @@ on Meteora's Dynamic Bonding Curve.
 | [Account](account.md) | Balance, holdings, settings |
 | [Buy and sell](trading.md) | Trade on the curve or after graduation |
 | [Launch a coin](launching.md) | Plant an idea or a meme |
-| [Fees](fees.md) | Fee tiers and the 30 / 30 / 40 split |
+| [Fees](fees.md) | Fee tiers and how the fee splits |
 | [Graduation](graduation.md) | Bonding curve vs. open market |
 | [Creators](creators.md) | Claim fees, edit your coin |
 | [Communities](communities.md) | Follow, post, updates |

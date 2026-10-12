@@ -32,8 +32,8 @@ prompt — cancel there and nothing moves. Some coins are unavailable in some
 regions: both buttons stay visible but disabled. See [Privacy and safety](privacy.md).
 
 !!! warning "New pools can be expensive"
-    The 1.25% → 0.30% tier opens at a **99%** fee falling to base over ~10 minutes
-    to deter snipers. Flat tiers charge their flat rate. Read
+    The curve fee opens at a **99%** fee falling to 1.25% over ~10 minutes
+    to deter snipers. Read
     [Fees](fees.md) before trading a brand-new pool.
 
 If something fails: a rejected prompt is safe (nothing moved); a

@@ -10,8 +10,9 @@ anonymized themes), read holder posts, and post yourself while holding
 follows in **Account → My interests**. Selling out (≤ $0.10 left)
 auto-unfollows with **Undo**.
 
-Creators send theme-matched updates from **Account → Your tokens**;
-followers see them under **News → Personalized**. Posting and following need a connected,
+A creator-update composer on **Account → Your tokens** (theme-matched
+to follower interests) and a **News → Personalized** feed are built but
+currently switched off. Posting and following need a connected,
 signed-in wallet.
 
 **Refresh posts** checks for new posts. **Report** on a post (Spam,
