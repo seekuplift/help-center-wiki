@@ -20,8 +20,10 @@ expired, tap the action again.
 ## Switch and disconnect
 
 On the trade sheet, **Switch wallet** re-authorizes the wallet app so you
-can pick another account. On Account, **Disconnect wallet** drops the
-session, optionally clearing local wallet-linked data too.
+can pick another account. **Instant wallet** (offered once when you buy,
+until you decline) trades without per-trade approvals once funded — set it
+up later in **Account**. On Account, **Disconnect wallet** drops the session,
+optionally clearing local wallet-linked data too.
 
 ## Prompts
 

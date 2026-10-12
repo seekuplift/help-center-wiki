@@ -35,6 +35,8 @@ on Meteora's Dynamic Bonding Curve.
 - Transactions are **irreversible** — review every wallet prompt.
 - Prices and charts are **display-grade**; fees and claims settle
   on-chain.
+- Some coins and actions are **unavailable in some regions** — the buttons
+  stay visible but disabled. See [Privacy and safety](privacy.md).
 
 !!! note "Project-or-cause funds"
     That share is distributed **manually by the team** today — not by an

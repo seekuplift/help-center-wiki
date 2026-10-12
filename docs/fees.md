@@ -29,10 +29,18 @@ It is also what **Review fees** in the Launch wizard opens.
 | Tier | On the curve | After graduation |
 |---|---|---|
 | 1.25% → 0.30% | **99% → 1.25%** over ~10 min (anti-sniper), then **1.25%** | **1.25% → 0.30%** as market cap grows |
+| Flat 1.25% | Same flat 1.25% on every trade | Same flat rate |
 | Flat 5% / Flat 10% | Same flat base on every trade | Same flat rate |
 
-A volatility fee can add to the curve fee during sharp price moves. SOL gas
-is separate.
+Some configs offer cause-only variants where the creator share is 0% and
+the whole remainder goes to the project or cause. Older live coins
+launched under earlier configs (for example a 16% creator share), and
+their post-graduation split can differ — the Launch wizard shows the
+exact schedule for the coin before you sign.
+
+A volatility fee can add to the on-curve fee during sharp price moves
+(capped at about 20% of the base fee). It does not apply after
+graduation. SOL gas is separate.
 
 ## Notes
 
@@ -40,24 +48,26 @@ is separate.
   After-graduation fees are not claimable in the app yet. See
   [Creators](creators.md).
 - The project-or-cause share is distributed **manually** for now — not
-  automatic, not locked, spend not live.
+  automatic, not locked, spend not live. Some idea coins release their
+  share per **approved milestone** instead — see
+  [Launch a coin](launching.md).
 - Not part of this split: SOL gas, launch costs, DAMM v2 LP mechanics
   outside the fee above.
 
 ## What the 40% share does in each cause funding mode
 
-- **Managed fund** — held in the fund vault; see the **Fund page** in the
-  app for the public ledger of contributions and disbursements.
+- **Philanthropic fund** — held in the fund vault; the **Philanthropic
+  fund** page in the app shows the public ledger of contributions and
+  disbursements.
 - **Curated cause / Giveth project** — earmarked for the named cause or
   project.
 - **Decide later** — held until the creator picks from the Creator
-  Dashboard, or falls back to the managed fund at the **90-day**
+  Dashboard, or falls back to the philanthropic fund at the **90-day**
   deadline.
 - **X / Reddit account** (deferred) — held until the named account claims and picks
-  (or the **90-day** claim deadline passes, then the managed fund).
+  (or the **90-day** claim deadline passes, then the philanthropic fund).
 - **DAO** — planned, not selectable yet.
 
-The managed fund is spent at SeekUplift's discretion and every payout is
+The philanthropic fund is spent at SeekUplift's discretion and every payout is
 published — it is never a guaranteed donation to a specific cause. Idea
-coins have their own funding modes; a cause is never an idea coin's
-destination.
+coins use idea funding modes instead (see [Launch a coin](launching.md)).

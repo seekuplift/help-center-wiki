@@ -9,7 +9,19 @@ disagree, those screens win.
 ## First launch
 
 The app starts only after you accept the current **Privacy Policy and
-Terms**. A version bump can ask you to review again.
+Terms**, including the jurisdiction box. A version bump can ask you to review again.
+
+## Availability by region
+
+Some features are unavailable in some regions — currently idea and startup
+create/buy/sell in the US and UK, and stock-quoted create/buy/sell in the
+US (full list: Terms → Restricted jurisdictions). The app checks your
+network location (IP mapped to country, never tied to your wallet).
+The lookup itself is kept in memory, but two exceptions store a country:
+the beta waitlist keeps it with the waitlist entry, and the app caches
+the last country on-device for up to 24h for outage use.
+Unavailable actions stay visible but disabled.
+Before the first check, everything is available.
 
 ## What the app may process
 
@@ -19,7 +31,7 @@ support messages, diagnostics, crash reports, and analytics (on after you
 accept unless you turn it off or turn on Do Not Sell or Share — both in
 Privacy Center).
 
-Reports are **wallet-attributed** for abuse prevention. Uploads pin via
+Reports are **wallet-attributed**. Uploads pin via
 the backend and, once on-chain, can be public and permanent.
 
 ## Rules we never break

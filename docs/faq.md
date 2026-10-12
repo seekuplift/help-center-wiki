@@ -21,14 +21,17 @@ project-or-cause share. → [Creators](creators.md)
 **What does Launch cost ≈0.013 SOL mean?**
 A one-time rent deposit, not a trading fee. → [Launch a coin](launching.md)
 
+**Est. receive — is the fee already taken off?**
+Yes, on fee-bearing tokens it's net. → [Buy and sell](trading.md)
+
 ## Cause funding
 
-**What is the managed fund?**
+**What is the philanthropic fund?**
 The default destination for a meme coin's 40% project-or-cause share,
 and the fallback for anything undecided at the deadline. It is spent at
 SeekUplift's discretion and every payout is published — it is never a
-guaranteed donation to a specific cause. The app's **Fund page** shows
-the public ledger. → [Launch a coin](launching.md)
+guaranteed donation to a specific cause. The app's **Philanthropic
+fund** page shows the public ledger. → [Launch a coin](launching.md)
 
 **Why is the DAO option not available?**
 Decentralized cause governance is planned, with no date: it ships once
@@ -39,7 +42,13 @@ the safeguards exist that make sure the funds can only reach causes.
 No, once it's final. A decide-later coin can still be picked within
 **90 days** of launch, and a claimed X/Reddit coin within the
 claimant's **30-day** window — after that the choice (or the fallback
-to the managed fund) is permanent. → [Creators](creators.md)
+to the philanthropic fund) is permanent. → [Creators](creators.md)
+
+**How does idea funding pay out?**
+Direct payout is the default — the idea share goes to an address named at
+launch. Where milestone funding is enabled, the payout wallet files a public plan and
+evidence; the operator approves each milestone, and a stalled plan can move
+the rest to community takeover. → [Launch a coin](launching.md)
 
 ## Using the app
 
@@ -55,6 +64,15 @@ posting, and reporting need one. → [Getting started](getting-started.md)
 No screen signs by itself. **Sign in** is a message (no funds move); buy,
 sell, launch, claim, and swaps move funds. Read the prompt. →
 [Wallets](wallets.md)
+
+**Buy and Sell are greyed out — why?**
+If the coin isn't available in your region, both buttons stop. If its
+market is switched off, **Sell still works** if you hold. →
+[Buy and sell](trading.md)
+
+**Home says Live data unavailable?**
+The feed is down — rows are on-chain estimates. It restores itself; pull
+to refresh. → [Getting help](support.md)
 
 ## Trading and launching
 
@@ -75,5 +93,5 @@ device**.
 **Someone asked for my seed phrase.** It is not Seek Uplift. Never share
 it. → [Privacy and safety](privacy.md)
 
-**What does a bug report send?** Notes, diagnostics, screenshot, your
-public wallet address, optional email — no keys. → [Getting help](support.md)
+**What does a bug report send?** Notes, diagnostics, screenshot, install ID,
+your wallet address only when signed in, optional email — no keys. → [Getting help](support.md)

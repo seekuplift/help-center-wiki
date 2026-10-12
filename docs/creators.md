@@ -13,7 +13,7 @@ is an on-chain transaction. See [Fees](fees.md).
 
 ## Edit coin details
 
-**Account → Edit your tokens**: connect the creator wallet, sign in, and
+**Account → Your tokens**: connect the creator wallet, sign in, and
 edit description, image, links, and prototype. Nothing changes on-chain
 until you sign. Follower themes and drafts live on the same dashboard.
 
@@ -29,6 +29,15 @@ Creator Dashboard (connect the creator wallet, sign the choice) within
 **90 days** of launch. If it launched naming an **X or Reddit account** (deferred — not
 selectable at launch yet),
 that account claims the choice with **Claim as @handle** on the coin
-page, then picks a cause, project, or the managed fund within **30 days**.
-Anything still undecided at the deadline **falls back to the managed
-fund**. A landed choice is permanent.
+page, then picks a cause, project, or the philanthropic fund within
+**30 days**. Anything still undecided at the deadline **falls back to
+the philanthropic fund**. A landed choice is permanent.
+
+## Idea coins: plans and milestones
+
+On milestone-funded direct-payout idea coins (where enabled), the **coin page** offers
+**File a funding plan** and **Submit evidence** to the payout wallet.
+Plans, evidence versions, round budget, milestone states, and operator
+verdicts are all public there. If no plan is approved, or a milestone
+stalls past its cure window, the operator may declare a **milestone
+default** and move the remaining share to community takeover.
