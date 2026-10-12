@@ -17,8 +17,7 @@ above with a tap-to-swap SKR row (**Max** keeps a small SOL reserve).
 **Rewards** (claimable creator fees) · **Settings** (appearance,
 language, notifications, custom RPC, trade prompts) · **Help & support** ·
 **My interests** (followed coins) · **Your tokens** (creator dashboard).
-**News** lives as its own tab, not in Account. **Privacy Center** ·
-**Security Policy** · **Legal** are footer links at the bottom of Account.
+**News** lives as its own tab, not in Account.
 
 Notifications: **News** can be toggled in Settings; graduation and
 milestone alerts ship on by default — toggle them in Settings (a

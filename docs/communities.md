@@ -16,5 +16,5 @@ signed-in wallet.
 
 **Refresh posts** checks for new posts. **Report** on a post (Spam,
 Harassment, Scam, Other) sends it with your wallet for review — reports
-don't hide a post on their own; enough distinct reports flag it for
-moderation. No private data in reports.
+don't hide a post on their own, but reports flag it for moderation.
+No private data in reports.

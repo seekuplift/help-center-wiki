@@ -93,7 +93,8 @@ remaining share to community takeover.
 ## Review and sign
 
 **Review & launch** shows your entries. **Launch cost ≈0.013 SOL** is a
-one-time rent deposit, not a trading fee. A **Launch fee** row appears
+one-time deploy cost (account rent plus program fees), not a trading fee.
+A **Launch fee** row appears
 only if the config charges one.
 
 After launch: share the mint, trading starts on the curve (the opening

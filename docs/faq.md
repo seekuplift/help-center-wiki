@@ -19,7 +19,8 @@ Account → **Rewards** → Claim. That is your 30% of on-curve fees, not the
 project-or-cause share. → [Creators](creators.md)
 
 **What does Launch cost ≈0.013 SOL mean?**
-A one-time rent deposit, not a trading fee. → [Launch a coin](launching.md)
+A one-time deploy cost — account rent plus program fees — not a trading
+fee. → [Launch a coin](launching.md)
 
 **Est. receive — is the fee already taken off?**
 Yes, on fee-bearing tokens it's net. → [Buy and sell](trading.md)
