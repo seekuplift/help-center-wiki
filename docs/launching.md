@@ -13,9 +13,8 @@ you sign.
 | **An idea** | The project |
 | **A meme with impact** | Exceptional causes the meme backs |
 
-On today's live config the post-Meteora fee splits **Creator 16% ·
-partner wallet 84%** — the team distributes the partner share manually
-to SeekUplift and the project or cause. New configs rolling out change
+On the production launch config the post-Meteora fee splits **Creator
+TBD · partner wallet TBD**. New configs rolling out change
 it to **Creator 30% · SeekUplift 30% · Project or cause 40%**. Full
 table: [Fees](fees.md).
 Where shown, **Review fees** on that step opens the Fees page.
@@ -29,9 +28,8 @@ and the UAE. See
 
 ## Fee tier
 
-The live config launches every coin on one schedule — **99% → 1.25%**
-anti-sniper decay, then flat 1.25% — so no tier picker shows. Where a
-config offers more than one, pick a **fee tier** (**1.25% → 0.30%**,
+The production launch config's schedule is **TBD**; a config with a
+single schedule shows no tier picker. Where a config offers more than one, pick a **fee tier** (**1.25% → 0.30%**,
 **Flat 1.25%**, **Flat 5%**, or **Flat 10%**, plus cause-only variants on
 some configs). It sets the coin's trading fee
 forever — **this choice is permanent**. Detail lines show the curve rate

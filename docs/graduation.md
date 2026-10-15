@@ -17,10 +17,8 @@ to refresh, reopen (route should read **Jupiter**). Do not spam retries.
 
 ## Fees after graduation
 
-On today's live config, graduation ends the creator's fee stream: **100%
-of the migrated pool's locked liquidity belongs to the partner
-position**, so post-graduation LP fees accrue there (the team
-distributes the partner share manually — see [Fees](fees.md)). New
+On the production launch config, who earns post-graduation LP fees is
+**TBD** — see [Fees](fees.md). New
 configs rolling out keep a three-way **30 / 30 / 40** split after
 graduation. Creator fees earned on the curve stay claimable from
 [Rewards](creators.md); after-graduation fees are not claimable in the

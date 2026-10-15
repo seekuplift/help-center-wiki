@@ -5,26 +5,22 @@
 Every trade pays a fee set by the coin's **fee tier** (picked at launch,
 permanent). Meteora takes **20%** of that fee first.
 
-## The split today
+## The split at launch
 
-Coins launching now sit on a single live config. Its post-Meteora
-remainder splits:
+The production launch config isn't final yet; **TBD** values are filled in
+once it is. Its post-Meteora remainder splits:
 
 | Recipient | Share* |
 |---|---|
-| Creator | **16%** |
-| Partner wallet | **84%** |
+| Creator | **TBD** |
+| Partner wallet | **TBD** |
 
 \* Of trading fees, after Meteora's 20% protocol share.
 
-Example — a $100 trade at 1.25%: $1.25 fee → $0.25 Meteora, **$0.16**
-creator, **$0.84** to the partner wallet.
-
-The partner-wallet share is not split on-chain — the team distributes it
+Any partner-wallet share is not split on-chain — the team distributes it
 **manually**: part to SeekUplift, part to the project or cause the coin
-backs (see the funding modes below). After graduation the creator earns
-nothing further: **100% of the migrated pool's locked liquidity belongs
-to the partner position**, so post-graduation LP fees accrue there.
+backs (see the funding modes below). Who earns post-graduation LP fees:
+**TBD**.
 
 ## The new fee configs (rolling out, not yet live)
 
@@ -49,10 +45,8 @@ shows it before you sign.
 
 ## Fee tiers
 
-The live config has one schedule: **99% → 1.25%** over ~10 min
-(anti-sniper), then a flat **1.25%** on the curve. After graduation the
-pool's own LP fee is a flat **0.25%**. There is no tier picker yet. The
-new configs offer:
+The production launch config's schedule is **TBD** (on the curve and
+after graduation). The new configs offer:
 
 | Tier | On the curve | After graduation |
 |---|---|---|

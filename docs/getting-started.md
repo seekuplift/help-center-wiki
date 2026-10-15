@@ -37,7 +37,7 @@ prompt — cancel there and nothing moves. Some coins are unavailable in some
 regions: the buttons stay visible but disabled (sometimes only Buy). See [Privacy and safety](privacy.md).
 
 !!! warning "New pools can be expensive"
-    The curve fee opens at a **99%** fee falling to 1.25% over ~10 minutes
+    The curve fee can open at **99%**, falling to its base over ~10 minutes
     to deter snipers. Read
     [Fees](fees.md) before trading a brand-new pool.
 

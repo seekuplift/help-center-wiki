@@ -5,20 +5,20 @@
 ## Fees
 
 **How are trading fees split?**
-Meteora takes 20% first. On today's live config the rest splits
-**Creator 16% · partner wallet 84%** — the team distributes the partner
-share manually to SeekUplift and the project or cause. New configs
+Meteora takes 20% first. On the production launch config the rest
+splits **Creator TBD · partner wallet TBD**. New configs
 rolling out change it to **Creator 30% · SeekUplift 30% · Project or
 cause 40%**. → [Fees](fees.md)
 
 **I bought in the first minutes and the fee was huge.**
 The curve fee opens at **99%** and falls to its base over ~10 minutes
-to deter snipers (base is 1.25% on today's config). →
+to deter snipers (the base depends on the coin's fee tier). →
 [Fees](fees.md)
 
 **How do I claim creator fees?**
 Account → **Rewards** → Claim. That is your creator share of on-curve
-fees — 16% of the post-Meteora remainder on today's config — not the
+fees — **TBD** of the post-Meteora remainder on the production launch
+config — not the
 project-or-cause share. → [Creators](creators.md)
 
 **What does Launch cost ≈0.013 SOL mean?**
@@ -45,7 +45,8 @@ the safeguards exist that make sure the funds can only reach causes.
 
 **Can I change my choice?**
 No, once it's final. A decide-later coin can still be picked within
-**90 days** of launch. An X/Reddit-locked coin has **90 days** to be
+**90 days** of launch. An X-locked coin (deferred; Reddit
+later) has **90 days** to be
 claimed, then the claimant has **30 days** from the claim to pick. After
 that the choice is permanent. A missed deadline sends a meme coin's share
 to the philanthropic fund and moves an idea coin to community takeover.

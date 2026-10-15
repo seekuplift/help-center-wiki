@@ -39,8 +39,8 @@ down** screen instead of opening.
 
 Wallet state and public address, balances and signatures, launch content
 and images, reports, bug reports (see [Getting help](support.md)),
-support messages, follows and the reasons you give, posts, a linked X or
-Reddit account (if you link one), the instant-wallet email (handled by
+support messages, follows and the reasons you give, posts, a linked X
+account (if you link one), the instant-wallet email (handled by
 magic.link), callout activity tied to your wallet (kept 30 days),
 diagnostics, crash reports, and analytics (on after you accept unless you
 turn it off or turn on Do Not Sell or Share — both in Privacy Center). On

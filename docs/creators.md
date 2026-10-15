@@ -8,8 +8,8 @@ coin. Keep that wallet — name and symbol can never change.
 ## Claim creator fees
 
 **Account → Rewards → Claim** (or **Claim all**). This is your creator
-share of on-curve fees — **16%** of the post-Meteora remainder on
-today's config (30% under the new configs rolling out) — not the
+share of on-curve fees — **TBD** of the post-Meteora remainder on the
+production launch config (30% under the new configs rolling out) — not the
 project-or-cause share. Claiming
 is an on-chain transaction. See [Fees](fees.md).
 
