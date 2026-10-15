@@ -22,6 +22,7 @@ on Meteora's Dynamic Bonding Curve.
 | [Fees](fees.md) | Fee tiers and how the fee splits |
 | [Graduation](graduation.md) | Bonding curve vs. open market |
 | [Creators](creators.md) | Claim fees, edit your coin |
+| [AI agents](agents.md) | Let your own agent trade and launch |
 | [Communities](communities.md) | Follow, post, updates |
 | [Discover and callouts](callouts.md) | Callouts (beta) |
 | [Getting help](support.md) | Bugs, support, this wiki |
