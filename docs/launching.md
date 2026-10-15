@@ -23,7 +23,8 @@ Where shown, **Review fees** on that step opens the Fees page.
 Startup create is currently turned off. Idea and startup launches and
 trading — and stock-quoted create/trade — are also unavailable in some
 regions: the option stays visible but disabled, with the reason
-underneath. Meme is not region-gated. See
+underneath. Meme launches are unavailable in the US, UK, Australia
+and the UAE. See
 [Privacy and safety](privacy.md).
 
 ## Fee tier

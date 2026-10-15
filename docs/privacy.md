@@ -16,7 +16,9 @@ Terms**, including the jurisdiction box. A version bump can ask you to review ag
 Some features are unavailable in some regions — currently idea and startup
 create/buy/sell in the US and UK, stock-quoted create/buy/sell in the
 US, and cause-related visibility and marketing in the US, UK, Australia,
-and the UAE. Meme create/trade is not region-gated. The list is managed
+and the UAE. Meme launches are unavailable in those four countries too,
+because every meme backs a cause; meme buy/sell is not region-gated.
+The list is managed
 server-side and can change without an app update (full list: Terms →
 Restricted jurisdictions). The app checks your
 network location (IP mapped to country, never tied to your wallet).
