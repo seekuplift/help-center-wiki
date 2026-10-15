@@ -41,6 +41,7 @@ wiki/
 │   ├── getting-started.md
 │   ├── fees.md                    # bonding-curve fee split (source of truth)
 │   ├── launching.md
+│   ├── agents.md
 │   ├── support.md                 # help and FAQ
 │   └── privacy.md
 ├── overrides/
