@@ -29,5 +29,5 @@ When the token feed is down, Home shows **Live data unavailable** with
 on-chain estimates — no retry button. The feed restores itself; pull to
 refresh anytime.
 
-Security vulnerabilities go via **Account → Security Policy** — never as
-a bug report. Support will never ask for your seed phrase.
+Security vulnerabilities go via **Account → Security** (the Security Policy) —
+never as a bug report. Support will never ask for your seed phrase.

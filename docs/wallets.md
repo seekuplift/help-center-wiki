@@ -4,6 +4,8 @@
 
 Seek Uplift never holds your keys. Your Solana wallet signs connections
 and transactions; the app cannot move funds without your approval.
+The one exception is the optional **instant wallet** (below), a separate
+wallet run by magic.link that signs trades without a prompt.
 
 ## Connect
 
@@ -20,9 +22,14 @@ expired, tap the action again.
 ## Switch and disconnect
 
 On the trade sheet, **Switch wallet** re-authorizes the wallet app so you
-can pick another account. **Instant wallet** (offered once when you buy,
-until you decline) trades without per-trade approvals once funded — set it
-up later in **Account**. On Account, **Disconnect wallet** drops the session,
+can pick another account. **Instant wallet** (offered once when you buy;
+set it up later in **Account → Instant trading**) is a separate in-app
+wallet, run by magic.link, that trades launchpad coins without per-trade
+approvals. Setup is a one-time, non-refundable **10 SKR** fee plus an email
+code. You fund it from your external wallet (currently up to 1 SOL and
+1,000,000 SKR), it pays its own SOL trade fees, and you can **Withdraw**
+everything back at any time. Unlinking or replacing it asks your external
+wallet to sign. On Account, **Disconnect wallet** drops the session,
 optionally clearing local wallet-linked data too.
 
 ## Prompts

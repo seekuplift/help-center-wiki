@@ -17,7 +17,8 @@ is an on-chain transaction. See [Fees](fees.md).
 
 **Account → Your tokens**: connect the creator wallet, sign in, and
 edit description, image, links, and prototype. Nothing changes on-chain
-until you sign. Follower themes and drafts live on the same dashboard.
+until you sign. Follower interest themes show on the same dashboard;
+draft updates are built but switched off in the current build.
 
 ## Project-or-cause funds
 

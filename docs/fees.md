@@ -50,7 +50,8 @@ shows it before you sign.
 ## Fee tiers
 
 The live config has one schedule: **99% → 1.25%** over ~10 min
-(anti-sniper), then a flat **1.25%** — there is no tier picker yet. The
+(anti-sniper), then a flat **1.25%** on the curve. After graduation the
+pool's own LP fee is a flat **0.25%**. There is no tier picker yet. The
 new configs offer:
 
 | Tier | On the curve | After graduation |
