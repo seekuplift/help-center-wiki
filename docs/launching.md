@@ -2,107 +2,41 @@
 
 --8<-- "includes/test-banner.md"
 
-The **Launch** tab deploys a coin on Meteora's Dynamic Bonding Curve on
-Solana mainnet. The mint is permanent. Review every wallet prompt before
-you sign.
+The **Launch** tab creates a coin on Solana mainnet. Name and symbol are
+permanent.
 
-## Idea or meme
+## Steps
 
-| Type | Project-or-cause fees go to |
-|---|---|
-| **An idea** | The project |
-| **A meme with impact** | Exceptional causes the meme backs |
+1. Pick **An idea** (fees fund the project) or **A meme with impact**
+   (fees fund causes). Meme launches are unavailable in the US, UK,
+   Australia, and the UAE.
+2. Fill in logo, name, symbol, and description. Images upload before you
+   sign and may become public permanently.
+3. Pick a **fee tier** if offered — it's permanent. See [Fees](fees.md).
+4. Pick where the project-or-cause share goes (below).
+5. **Review & launch** and sign. **Launch cost ≈0.013 SOL** is a one-time
+   deploy cost, not a trading fee.
 
-On the production launch config the post-Meteora fee splits **Creator
-TBD · partner wallet TBD**. New configs rolling out change
-it to **Creator 30% · SeekUplift 30% · Project or cause 40%**. Full
-table: [Fees](fees.md).
-Where shown, **Review fees** on that step opens the Fees page.
+## Where the project-or-cause share goes
 
-Startup create is currently turned off. Idea and startup launches and
-trading — and stock-quoted create/trade — are also unavailable in some
-regions: the option stays visible but disabled, with the reason
-underneath. Meme launches are unavailable in the US, UK, Australia
-and the UAE. See
-[Privacy and safety](privacy.md).
+**Meme coins:** the **Philanthropic fund** (default), a **curated
+cause**, a **Giveth project**, or **decide later** (pick within 90 days,
+else the philanthropic fund). The fund is spent at SeekUplift's
+discretion and every payout is published.
 
-## Fee tier
+**Idea coins:** **direct payout** to an address you name (default), or
+**decide later** (90 days, else community takeover).
 
-The production launch config's schedule is **TBD**; a config with a
-single schedule shows no tier picker. Where a config offers more than one, pick a **fee tier** (**1.25% → 0.30%**,
-**Flat 1.25%**, **Flat 5%**, or **Flat 10%**, plus cause-only variants on
-some configs). It sets the coin's trading fee
-forever — **this choice is permanent**. Detail lines show the curve rate
-and the after-graduation rate before you confirm.
+The choice is permanent once final. This share is distributed
+**manually by the team** for now.
 
-## What to fill in
+## After launch
 
-Required: logo, name (at least 3 characters, max 32 UTF-8 bytes), symbol
-(max 10 UTF-8 bytes), description — plus use case, problem, and
-prototype link for ideas.
-
-Optional: **creator first buy** (defaults to 100 SKR to seed your own
-position; clear to skip; not offered on every config), website, X, and —
-for meme coins — a **cause funding mode** (see below).
-
-Uploads pin **before** you sign and may become public permanently. No gas
-is spent on upload. Retrying reuses the uploaded image — don't pick a new
-one, just tap retry. Uploads are limited (about 10 per hour).
-
-## Cause funding mode (meme coins)
-
-Pick where the coin's **project-or-cause share** goes. The
-**Philanthropic fund** is the default and preselect. The other live
-options are a **curated cause**, a **specific Giveth project**, and
-**decide later**.
-Letting an **X or Reddit account** choose is deferred — those rows
-appear in the picker once their config enables them. **DAO** is shown
-as planned — it cannot be selected yet.
-
-- **Philanthropic fund** — the share goes to the SeekUplift
-  philanthropic fund, spent at SeekUplift's discretion with every
-  payout published. It is never a guaranteed donation to a specific
-  cause.
-- **Curated cause / Giveth project** — the share is earmarked for the
-  cause basket or project you name.
-- **Decide later** — you pick the destination from the Creator Dashboard
-  within **90 days** of launch.
-- **X / Reddit account** (deferred, not selectable yet) — the named
-  account claims the choice with **Claim as @handle** (a fresh X
-  verification, or the wallet's verified Reddit link) within **90
-  days**, then picks the destination within **30 days**.
-- Anything undecided at the deadline **falls back to the philanthropic
-  fund**.
-
-The choice is **permanent once final** — it cannot be changed after it
-lands. Review & launch restates your pick before you sign.
-
-## Idea funding mode (idea coins)
-
-Pick where the coin's **idea share** goes. **Direct payout** is the
-default — paid to a Solana address you name at launch. Live alternatives:
-**decide later** (you pick the final mode within **90 days**, else
-community takeover) and an **X or Reddit account** — the choice locks to
-the handle at launch, and it has **90 days** to claim, else community
-takeover. **Managed by Seek Uplift** and **Realms DAO** are shown but
-can't be selected yet.
-
-Some direct-payout coins are additionally released per **approved
-milestone** (where enabled): the payout wallet files a public **funding plan** (milestones
-with deliverables, evidence, deadlines, amounts; an optional kickoff up to
-10%), then submits evidence, and the operator approves each one. Plans,
-evidence versions, and verdicts are public on the coin page. A plan that
-misses its deadlines can trigger a **milestone default**, moving the
-remaining share to community takeover.
-
-## Review and sign
-
-**Review & launch** shows your entries. **Launch cost ≈0.013 SOL** is a
-one-time deploy cost (account rent plus program fees), not a trading fee.
-A **Launch fee** row appears
-only if the config charges one.
-
-After launch: share the mint, trading starts on the curve (the opening
-fee depends on the tier — see [Fees](fees.md)), creator fees accrue to
-**Account → Rewards**, and only the creator wallet can edit description,
-image, and socials (on configs that grant it update authority).
+- **Graduation:** when the curve fills, the coin moves to the open market
+  and trades via Jupiter. For a moment it can't be traded — close the
+  sheet, refresh, and retry.
+- **Creator fees:** **Account → Rewards → Claim**, with the wallet that
+  launched the coin. Fees earned after graduation aren't claimable in the
+  app yet.
+- **Edit:** **Account → Your tokens** lets the creator wallet edit
+  description, image, and links.

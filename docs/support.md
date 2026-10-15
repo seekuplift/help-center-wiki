@@ -1,33 +1,32 @@
-# Getting help
+# Help and FAQ
 
 --8<-- "includes/test-banner.md"
 
-From the help icon on every screen (some rows only appear when enabled
-for your build — a missing row is not an error):
+Tap the help icon on any screen:
 
-| Row | Use it when |
-|---|---|
-| **Legal removal request** | Content should be taken down |
-| **Guides & FAQ** | Learn how something works (this wiki) |
-| **Report a bug** | Something broke (no sign-in needed) |
-| **Create a support ticket** / **Open chat** | You need a human |
+- **Report a bug** — describe the problem and send. No sign-in needed;
+  never include seed phrases or keys.
+- **Create a support ticket** — reach a human.
+- **Guides & FAQ** — this wiki.
 
-## Report a bug
+Security vulnerabilities go via **Account → Security**, not a bug report.
 
-Describe what went wrong (required, up to 4,000 chars), optionally add
-email and photos, then **Send report**. Reports include app version,
-screen, install ID, feature flags, and redacted
-diagnostics (rate-limited, currently 5
-per hour) — your wallet address only when signed in, and detailed
-transaction/balance telemetry only while analytics is on. Never put seed phrases or keys in notes or screenshots.
+## FAQ
 
-On Android the wiki opens in-app (in-wiki links stay inside; Back leaves
-the wiki). On web it opens a new tab. **Open in browser** works if the
-viewer fails.
+**Why SKR, not SOL?** Pools are priced in SKR. SOL pays gas.
 
-When the token feed is down, Home shows **Live data unavailable** with
-on-chain estimates — no retry button. The feed restores itself; pull to
-refresh anytime.
+**My first buy had a huge fee.** New coins open at a high fee that drops
+over ~10 minutes. See [Fees](fees.md).
 
-Security vulnerabilities go via **Account → Security** (the Security Policy) —
-never as a bug report. Support will never ask for your seed phrase.
+**Buy or Sell is greyed out.** The coin isn't available in your region,
+or its market is paused. You can usually still sell.
+
+**Trade says No route found.** The coin just graduated — wait a moment,
+then reopen the sheet.
+
+**Home says Live data unavailable.** The feed is down; it recovers on its
+own. Pull to refresh.
+
+**How do I claim creator fees?** **Account → Rewards → Claim**.
+
+**Someone asked for my seed phrase.** It isn't us. Never share it.

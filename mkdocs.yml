@@ -84,20 +84,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Using the app:
-    - Getting started: getting-started.md
-    - Wallets: wallets.md
-    - Account: account.md
-    - Buy and sell: trading.md
-    - Discover and callouts: callouts.md
-    - Communities: communities.md
-  - Launching:
-    - Launch a coin: launching.md
-    - Fees: fees.md
-    - Graduation: graduation.md
-    - Creators: creators.md
-    - AI agents: agents.md
-  - Help:
-    - Getting help: support.md
-    - Privacy and safety: privacy.md
-    - FAQ: faq.md
+  - Getting started: getting-started.md
+  - Launch a coin: launching.md
+  - Fees: fees.md
+  - Privacy and safety: privacy.md
+  - Help and FAQ: support.md

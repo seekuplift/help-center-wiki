@@ -113,8 +113,7 @@ def agent_payload(provider_id: str) -> dict:
                         "index": MARKDOWN_INDEX,
                         "description": (
                             "Seek Uplift help-center wiki: getting started, wallets, "
-                            "account, trading, fees, launching, graduation, creators, "
-                            "communities, callouts, privacy, FAQ, and getting help."
+                            "trading, launching, fees, privacy, getting help, and FAQ."
                         ),
                     }
                 ],

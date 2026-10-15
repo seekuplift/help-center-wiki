@@ -10,36 +10,14 @@ Seek Uplift is a **SKR-based launchpad that shares value out.** Trading
 fees go to creators, SeekUplift, and the project or causes a coin backs —
 on Meteora's Dynamic Bonding Curve.
 
-## Guides
-
-| Guide | What it covers |
-|---|---|
-| [Getting started](getting-started.md) | First session: connect, get SKR, first buy |
-| [Wallets](wallets.md) | Connect, switch, disconnect |
-| [Account](account.md) | Balance, holdings, settings |
-| [Buy and sell](trading.md) | Trade on the curve or after graduation |
-| [Launch a coin](launching.md) | Plant an idea or a meme |
-| [Fees](fees.md) | Fee tiers and how the fee splits |
-| [Graduation](graduation.md) | Bonding curve vs. open market |
-| [Creators](creators.md) | Claim fees, edit your coin |
-| [AI agents](agents.md) | Let your own agent trade and launch |
-| [Communities](communities.md) | Follow, post, updates |
-| [Discover and callouts](callouts.md) | Callouts (beta) |
-| [Getting help](support.md) | Bugs, support, this wiki |
-| [Privacy and safety](privacy.md) | Data, safety rules |
-| [FAQ](faq.md) | Short answers |
+- [Getting started](getting-started.md) — connect a wallet, get SKR, buy and sell
+- [Launch a coin](launching.md) — launch, graduation, creator fees
+- [Fees](fees.md) — fee tiers and the split
+- [Privacy and safety](privacy.md) — data and regions
+- [Help and FAQ](support.md) — bugs, support, short answers
 
 ## Safety
 
 - Seek Uplift **never asks for your seed phrase or private keys.**
-- Token pages and scores are **informational**, not financial advice.
 - Transactions are **irreversible** — review every wallet prompt.
-- Prices and charts are **display-grade**; fees and claims settle
-  on-chain.
-- Some coins and actions are **unavailable in some regions** — the buttons
-  stay visible but disabled. See [Privacy and safety](privacy.md).
-
-!!! note "Project-or-cause funds"
-    That share is distributed **manually by the team** today — not by an
-    on-chain program. Spend is not live and funds are not claimed locked.
-    Details: [Fees](fees.md).
+- Nothing here is financial advice.

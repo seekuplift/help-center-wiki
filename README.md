@@ -39,18 +39,10 @@ wiki/
 │   │   └── algolia.css            # DocSearch header slot
 │   ├── index.md                   # help-center home (user-facing)
 │   ├── getting-started.md
-│   ├── wallets.md
-│   ├── account.md
-│   ├── trading.md
 │   ├── fees.md                    # bonding-curve fee split (source of truth)
 │   ├── launching.md
-│   ├── graduation.md
-│   ├── creators.md
-│   ├── communities.md
-│   ├── callouts.md
-│   ├── support.md
-│   ├── privacy.md
-│   └── faq.md
+│   ├── support.md                 # help and FAQ
+│   └── privacy.md
 ├── overrides/
 │   └── main.html                  # theme-color + Space Grotesk
 ├── scripts/
