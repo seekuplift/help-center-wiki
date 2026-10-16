@@ -27,9 +27,10 @@ changes as the service does, so this page does not repeat it.
   launching it, unless you have told it that it may launch without asking.
   It buys and sells on its own, so put any spending limits in your
   agent's instructions.
-- **Creator fees.** Claim them in the app under **Account → Rewards →
-  Claim**, with the wallet that paid for the launch. See
-  [Launch a coin](launching.md#after-launch).
+- **Creator fees.** Only the wallet that paid for the launch can claim
+  them. Your agent can claim them for you with that wallet. To claim in
+  the app instead (**Account → Rewards → Claim**), you must connect that
+  same wallet — if only your agent holds its key, ask the agent to claim.
 
 Transactions are irreversible, as in the app. Some actions are
 unavailable in some regions, and the agent rules can be stricter than the
