@@ -12,7 +12,7 @@ on Meteora's Dynamic Bonding Curve.
 
 - [Getting started](getting-started.md) — connect a wallet, get SKR, buy and sell
 - [Launch a coin](launching.md) — launch, graduation, creator fees
-- [Fees](fees.md) — fee tiers and the split
+- [Fees](fees.md) — fee tiers, the split, and graduation
 - [AI agents](agents.md) — let your own agent trade and launch
 - [Privacy and safety](privacy.md) — data and regions
 - [Help and FAQ](support.md) — bugs, support, short answers
