@@ -67,10 +67,10 @@ transfer, **on top of** the trading fee above:
 - The rate is fixed at launch and can never be changed.
 - Meteora takes no cut of it, and the creator gets none.
 
-| Config | Launchpad | Cause |
-|---|---|---|
-| Standard | **42.85%** | **57.15%** |
-| Cause-only | not offered with a transfer fee | not offered with a transfer fee |
+| Config | Creator | Launchpad | Cause |
+|---|---|---|---|
+| Standard | 0% | **42.85%** | **57.15%** |
+| Cause-only | 0% | 0% | **100%** |
 
 The cause share is held on-chain, by the program and not by the team,
 until the fee-router upgrade distributes it. SeekUplift claims the
@@ -98,5 +98,4 @@ claimed. After Meteora's 20%, the rest follows the split above.
 **Fee-on-transfer coins** graduate differently. The pool is funded with
 amounts **after** the transfer fee, and the pool's starting liquidity is
 reduced by the larger of the two transfer fees. Anything left
-undeposited goes to Meteora's protocol migration fee. Graduation of
-these coins also needs a Meteora DAMM v2 update that isn't deployed yet.
+undeposited goes to Meteora's protocol migration fee.
