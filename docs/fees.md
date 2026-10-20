@@ -48,8 +48,9 @@ out next offer:
 | 1.25% → 0.30% | **1.25%** on the curve; after graduation falls toward **0.30%** as market cap grows |
 | Flat 1.25% / 5% / 10% | Same rate on every trade, before and after graduation |
 
-Every tier, flat ones included, opens at **99%** and falls linearly over
-20 periods of 75 slots (1,500 slots, about 10 minutes) to its own fee.
+Every tier, flat ones included, opens at **99%** and falls exponentially
+(fastest at the start) over 20 periods of 75 slots (1,500 slots, about 10
+minutes) to its own fee.
 
 Flat tiers on the curve also add a small volatility surcharge when
 trading is hectic (up to about +0.25% / +1% / +2% for the 1.25% / 5% /
