@@ -27,6 +27,9 @@ then reopen the sheet.
 **Home says Live data unavailable.** The feed is down; it recovers on its
 own. Pull to refresh.
 
-**How do I claim creator fees?** **Account → Rewards → Claim**.
+**How do I claim creator fees?** **Account → Rewards → Claim**, with the
+wallet that launched the coin. After graduation, Rewards also shows fees
+from the open-market pool if the coin's launch setup gives the creator a
+share of it. Coins launched on the current setup don't have one.
 
 **Someone asked for my seed phrase.** It isn't us. Never share it.

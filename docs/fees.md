@@ -98,6 +98,12 @@ When the curve fills, Meteora moves the coin to a DAMM v2 pool.
 Locked liquidity can't be withdrawn; only its trading fees are
 claimed. After Meteora's 20%, the rest follows the split above.
 
+The 70/30 liquidity split applies to the configs rolling out next. On
+those coins the creator claims the 30% position's fees in the app, under
+**Account → Rewards**, with the wallet that launched the coin. Coins
+launched on the current setup don't give the creator a share of the
+graduated pool, so there is nothing to claim there.
+
 **Fee-on-transfer coins** graduate differently. The pool is funded with
 amounts **after** the transfer fee, and the pool's starting liquidity is
 reduced by the larger of the two transfer fees. Anything left

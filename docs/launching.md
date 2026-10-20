@@ -36,7 +36,9 @@ release, this share is set aside on-chain for the project or cause.
   and trades via Jupiter. For a moment it can't be traded — close the
   sheet, refresh, and retry.
 - **Creator fees:** **Account → Rewards → Claim**, with the wallet that
-  launched the coin. Fees earned after graduation aren't claimable in the
-  app yet.
+  launched the coin. After graduation, fees from the open-market pool can
+  also be claimed from Rewards when the coin's launch setup gives the
+  creator a share of that pool. Coins launched on the current setup don't
+  have one, so Rewards says so instead of showing a claim.
 - **Edit:** **Account → Your tokens** lets the creator wallet edit
   description, image, and links.

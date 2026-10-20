@@ -28,7 +28,10 @@ changes as the service does, so this page does not repeat it.
   It buys and sells on its own, so put any spending limits in your
   agent's instructions.
 - **Creator fees.** Only the wallet that paid for the launch can claim
-  them. Your agent can claim them for you with that wallet. To claim in
+  them. Your agent can claim them for you with that wallet, including
+  fees earned after graduation when the coin's launch setup gives the
+  creator a share of the graduated pool (the claim request takes
+  `source: "position"` for those). To claim in
   the app instead (**Account → Rewards → Claim**), you must connect that
   same wallet — if only your agent holds its key, ask the agent to claim.
 
