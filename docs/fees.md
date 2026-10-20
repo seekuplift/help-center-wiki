@@ -75,8 +75,8 @@ transfer, **on top of** the trading fee above:
 | Standard | 0% | **42.85%** | **57.15%** |
 | Cause-only | 0% | 0% | **100%** |
 
-The cause share is held on-chain, by the program and not by the team,
-until the fee-router upgrade distributes it. SeekUplift claims the
+The cause share is set aside on-chain, held by the program and not by
+the team. Payouts start in a later release. SeekUplift claims the
 launchpad share.
 
 What you'll see: buyers receive slightly fewer tokens, and a seller's

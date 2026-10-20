@@ -27,8 +27,8 @@ discretion and every payout is published.
 **Idea coins:** **direct payout** to an address you name (default), or
 **decide later** (90 days, else community takeover).
 
-The choice is permanent once final. This share is distributed
-**manually by the team** for now.
+The choice is permanent once final. Until payouts start in a later
+release, this share is set aside on-chain for the project or cause.
 
 ## After launch
 
