@@ -10,14 +10,16 @@ waitlist first — tap **Join the waitlist** and we'll notify you.
 
 ## 2. Connect a wallet
 
-Browsing needs no wallet. Buying, selling, launching, claiming, and
+Browsing needs no wallet. Buying, selling, launching, claiming, following and
 posting do: **Account → Connect wallet**. The app never moves funds
-without your approval in the wallet. Connect and **Sign in** prompts move
+without your approval in the wallet, except trades from the optional
+Instant wallet below. Connect and **Sign in** prompts move
 no funds; buy, sell, launch, claim, and swaps do.
 
 **Instant wallet** (optional, **Account → Instant trading**): a separate
 wallet run by magic.link that trades without a prompt each time. Setup
-costs a one-time **10 SKR**. Fund it from your wallet (currently up to
+costs a one-time, non-refundable **10 SKR**, and instant trading is an
+interim feature that may be retired after notice. Fund it from your wallet (currently up to
 1 SOL and 1,000,000 SKR) and **Withdraw** back anytime.
 
 ## 3. Get SKR
@@ -36,5 +38,5 @@ wallet prompt — cancel there and nothing moves.
     deter snipers. See [Fees](fees.md).
 
 If a button is disabled, the coin isn't available in your region (the
-reason shows underneath). **Follow** a coin to see holder posts; holding
-at least $5 lets you post.
+reason shows underneath). **Follow** a coin to get its updates; holding
+at least $5 of it lets you post.

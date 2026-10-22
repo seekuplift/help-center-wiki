@@ -23,5 +23,6 @@ and permanent.
 ## Rules we never break
 
 - **Never ask for your seed phrase or private keys.**
-- **No signature without your tap.**
+- **No signature without your tap**, except trades from the optional
+  Instant wallet you set up.
 - **Not financial advice.**

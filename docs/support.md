@@ -2,7 +2,7 @@
 
 --8<-- "includes/test-banner.md"
 
-Tap the help icon on any screen:
+Tap the help icon on any screen (options vary by app build):
 
 - **Report a bug** — describe the problem and send. No sign-in needed;
   never include seed phrases or keys.

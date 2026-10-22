@@ -8,9 +8,9 @@ permanent). Meteora takes **20%** of that fee first. SOL gas is separate.
 ## The split
 
 Every trading fee is divided the same way, on the bonding curve and
-after graduation. The production launch config isn't final yet, so
-**TBD** values for it are filled in once it is. The configs rolling out
-next (the split below) are enforced on-chain.
+after graduation. The split below is for the configs rolling out next;
+coins launched today use the current setup, where the creator gets 16%
+of what's left after Meteora and there is no fee-tier choice.
 
 ### Standard configs (creator share 30%)
 
@@ -50,9 +50,10 @@ out next offer:
 
 Every tier, flat ones included, opens at **99%** and falls exponentially
 (fastest at the start) over 20 periods of 75 slots (1,500 slots, about 10
-minutes) to its own fee.
+minutes) to its own fee. The creator's own first buy in the launch
+transaction pays the base fee instead.
 
-Flat tiers on the curve also add a small volatility surcharge when
+Every tier on the curve also adds a small volatility surcharge when
 trading is hectic (up to about +0.25% / +1% / +2% for the 1.25% / 5% /
 10% tiers). The Launch wizard shows the exact schedule before you sign.
 
@@ -63,12 +64,12 @@ trading is hectic (up to about +0.25% / +1% / +2% for the 1.25% / 5% /
     describes how they will work.
 
 A coin can be launched as a **fee-on-transfer** coin (a Token-2022
-transfer fee). The coin itself takes **1%, 5% or 10%** of every
+transfer fee). The coin itself takes **1% or 10%** (more rates to come later) of every
 transfer, **on top of** the trading fee above:
 
 - It applies to buys, sells, and plain wallet-to-wallet transfers, on
   any venue, before and after graduation.
-- The rate is fixed at launch and can never be changed.
+- The rate is set at launch.
 - Meteora takes no cut of it, and the creator gets none.
 
 | Config | Creator | Launchpad | Cause |
@@ -76,8 +77,8 @@ transfer, **on top of** the trading fee above:
 | Standard | 0% | **42.85%** | **57.15%** |
 | Cause-only | 0% | 0% | **100%** |
 
-The cause share is set aside on-chain, held by the program and not by
-the team. Payouts start in a later release. SeekUplift claims the
+The cause share is set aside for the cause; payouts start in a later
+release. SeekUplift claims the
 launchpad share.
 
 What you'll see: buyers receive slightly fewer tokens, and a seller's
@@ -90,7 +91,7 @@ When the curve fills, Meteora moves the coin to a DAMM v2 pool.
 
 | Item | What applies |
 |---|---|
-| Migration fee set in our configs | **0%** (partner and creator migration fee), and a **0** pool-creation fee |
+| Migration fee set in our configs | **0%** (partner and creator migration fee) |
 | Meteora protocol migration fee | **0.2%** of the liquidity being migrated |
 | Pool trading fee after graduation | Same rate as the tier (flat tiers), or 1.25% falling toward 0.30% (market-cap tier) |
 | Meteora share of that fee | **20%** by default, taken before the split above |
