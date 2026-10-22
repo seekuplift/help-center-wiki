@@ -12,7 +12,8 @@ Give your agent this address:
 `https://skill.seekuplift.com/skill.md`
 
 That file is the reference for everything the agent can do and how. It
-changes as the service does, so this page does not repeat it.
+changes as the service does, so this page does not repeat it. No API key or
+sign-up is needed.
 
 !!! note "Not live yet"
     The skill address goes live with the public release. Its source is at
