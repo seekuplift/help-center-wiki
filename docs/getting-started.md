@@ -6,21 +6,21 @@
 
 Tick the jurisdiction box and tap **I agree to the Privacy Policy and
 Terms**. In the US, UK, and EU/EEA you may see a **Seek Uplift Beta**
-waitlist first — tap **Join the waitlist** and we'll notify you.
+waitlist first. Tap **Join the waitlist** and we'll notify you.
 
 ## 2. Connect a wallet
 
 Browsing needs no wallet. Buying, selling, launching, claiming, following and
-posting do: **Account → Connect wallet**. The app never moves funds
+posting do. Connect one under **Account → Connect wallet**. The app never moves funds
 without your approval in the wallet, except trades from the optional
 Instant wallet below. Connect and **Sign in** prompts move
 no funds; buy, sell, launch, claim, and swaps do.
 
-**Instant wallet** (optional, **Account → Instant trading**): a separate
-wallet run by magic.link that trades without a prompt each time. Setup
+The optional **Instant wallet** (**Account → Instant trading**) is a
+separate wallet run by magic.link that trades without a prompt each time. Setup
 costs a one-time, non-refundable **10 SKR**, and instant trading is an
-interim feature that may be retired after notice. Fund it from your wallet (currently up to
-1 SOL and 1,000,000 SKR) and **Withdraw** back anytime.
+interim feature we may retire after notice. Fund it from your wallet
+(currently up to 1 SOL and 1,000,000 SKR) and **Withdraw** back anytime.
 
 ## 3. Get SKR
 
@@ -31,7 +31,7 @@ sheet.
 ## 4. Buy and sell
 
 Open a coin and tap **Buy** or **Sell**, enter an amount, and review the
-wallet prompt — cancel there and nothing moves.
+wallet prompt. If you cancel there, nothing moves.
 
 !!! warning "New coins can be expensive"
     The fee opens at **99%** and falls to its base over ~10 minutes to

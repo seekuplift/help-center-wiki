@@ -34,7 +34,7 @@ sign-up is needed.
   creator a share of the graduated pool (the claim request takes
   `source: "position"` for those). To claim in
   the app instead (**Account → Rewards → Claim**), you must connect that
-  same wallet — if only your agent holds its key, ask the agent to claim.
+  same wallet. If only your agent holds its key, ask the agent to claim.
 
 Transactions are irreversible, as in the app. Some actions are
 unavailable in some regions, and the agent rules can be stricter than the

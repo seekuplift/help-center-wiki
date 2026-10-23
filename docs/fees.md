@@ -7,8 +7,8 @@ permanent). Meteora takes **20%** of that fee first. SOL gas is separate.
 
 ## The split
 
-Every trading fee is divided the same way, on the bonding curve and
-after graduation. The split below is for the configs rolling out next;
+Every trading fee splits the same way, on the bonding curve and after
+graduation. The split below is for the configs rolling out next;
 coins launched today use the current setup, where the creator gets 16%
 of what's left after Meteora and there is no fee-tier choice.
 
@@ -16,10 +16,10 @@ of what's left after Meteora and there is no fee-tier choice.
 
 | Recipient | Share of every trading fee |
 |---|---|
-| Meteora (protocol) | **20%** |
-| Creator | **24%** |
-| SeekUplift launchpad | **24%** |
-| Project or cause | **32%** |
+| Meteora (protocol) | 20% |
+| Creator | 24% |
+| SeekUplift launchpad | 24% |
+| Project or cause | 32% |
 
 Meteora takes 20% first. Of the remaining 80%, the creator gets 30%
 (24% of the total). The other 70% is the partner share, split 30/70
@@ -33,19 +33,19 @@ The creator gets nothing and SeekUplift keeps nothing.
 
 | Recipient | Share of every trading fee |
 |---|---|
-| Meteora (protocol) | **20%** |
-| Creator | **0%** |
-| SeekUplift launchpad | **0%** |
-| Cause | **80%** |
+| Meteora (protocol) | 20% |
+| Creator | 0% |
+| SeekUplift launchpad | 0% |
+| Cause | 80% |
 
 ## Fee tiers
 
-The production launch config's schedule is **TBD**. The configs rolling
+The production launch config's schedule isn't decided yet. The configs rolling
 out next offer:
 
 | Tier | Fee |
 |---|---|
-| 1.25% → 0.30% | **1.25%** on the curve; after graduation falls toward **0.30%** as market cap grows |
+| 1.25% falling to 0.30% | 1.25% on the curve; after graduation it falls toward 0.30% as market cap grows |
 | Flat 1.25% / 5% / 10% | Same rate on every trade, before and after graduation |
 
 Every tier, flat ones included, opens at **99%** and falls exponentially
@@ -74,15 +74,14 @@ transfer, **on top of** the trading fee above:
 
 | Config | Creator | Launchpad | Cause |
 |---|---|---|---|
-| Standard | 0% | **42.85%** | **57.15%** |
-| Cause-only | 0% | 0% | **100%** |
+| Standard | 0% | 42.85% | 57.15% |
+| Cause-only | 0% | 0% | 100% |
 
-The cause share is set aside for the cause; payouts start in a later
-release. SeekUplift claims the
-launchpad share.
+The cause share is set aside for the cause, and payouts start in a later
+release. SeekUplift claims the launchpad share.
 
-What you'll see: buyers receive slightly fewer tokens, and a seller's
-tokens are reduced by the fee before the swap. Quotes in the app show
+Buyers receive slightly fewer tokens, and the fee comes out of a seller's
+tokens before the swap. Quotes in the app show
 amounts **net of the fee**.
 
 ## What happens at graduation
@@ -91,14 +90,14 @@ When the curve fills, Meteora moves the coin to a DAMM v2 pool.
 
 | Item | What applies |
 |---|---|
-| Migration fee set in our configs | **0%** (partner and creator migration fee) |
-| Meteora protocol migration fee | **0.2%** of the liquidity being migrated |
+| Migration fee set in our configs | 0% (partner and creator migration fee) |
+| Meteora protocol migration fee | 0.2% of the liquidity being migrated |
 | Pool trading fee after graduation | Same rate as the tier (flat tiers), or 1.25% falling toward 0.30% (market-cap tier) |
-| Meteora share of that fee | **20%** by default, taken before the split above |
-| Liquidity | Permanently locked: **70%** held by SeekUplift's claim account and **30%** by the creator (standard); **100%** on cause-only |
+| Meteora share of that fee | 20% by default, taken before the split above |
+| Liquidity | Permanently locked. SeekUplift's claim account holds 70% and the creator 30% (standard), or SeekUplift 100% (cause-only) |
 
-Locked liquidity can't be withdrawn; only its trading fees are
-claimed. After Meteora's 20%, the rest follows the split above.
+Nobody can withdraw locked liquidity. Its holders claim only its trading
+fees. After Meteora's 20%, the rest follows the split above.
 
 The 70/30 liquidity split applies to the configs rolling out next. On
 those coins the creator claims the 30% position's fees in the app, under
@@ -106,7 +105,7 @@ those coins the creator claims the 30% position's fees in the app, under
 launched on the current setup don't give the creator a share of the
 graduated pool, so there is nothing to claim there.
 
-**Fee-on-transfer coins** graduate differently. The pool is funded with
-amounts **after** the transfer fee, and the pool's starting liquidity is
-reduced by the larger of the two transfer fees. Anything left
+**Fee-on-transfer coins** graduate differently. The migration funds the pool
+with amounts **after** the transfer fee and reduces its starting liquidity
+by the larger of the two transfer fees. Anything left
 undeposited goes to Meteora's protocol migration fee.

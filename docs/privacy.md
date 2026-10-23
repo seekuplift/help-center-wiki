@@ -8,7 +8,7 @@ documents of record; if this page disagrees, they win.
 ## Regions
 
 The app uses your network location (mapped to a country, never tied to
-your wallet). Some features are unavailable in some regions — the buttons
+your wallet). Some features are unavailable in some regions. The buttons
 stay visible but disabled. Full list: **Terms → Restricted
 jurisdictions**.
 

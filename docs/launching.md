@@ -13,7 +13,7 @@ permanent.
    prototype link, a use case and a problem, which are permanent too.
    Images upload before you sign and may become public permanently.
 3. Pick where the project-or-cause share goes (below).
-4. Pick a **fee tier** if offered — it's permanent. See [Fees](fees.md).
+4. Pick a **fee tier** if offered. It's permanent. See [Fees](fees.md).
 5. **Review & launch** and sign. **Launch cost ≈0.013 SOL** is a one-time
    deploy cost, not a trading fee (the configs rolling out next add a
    0.01 SOL pool-creation fee). Count the pre-filled creator first buy
@@ -21,12 +21,12 @@ permanent.
 
 ## Where the project-or-cause share goes
 
-**Meme coins:** the **Philanthropic fund** (default), a **curated
+**Meme coins.** The **Philanthropic fund** (default), a **curated
 cause**, a **Giveth project**, or **decide later** (pick within 90 days,
-else the philanthropic fund). The fund is spent at SeekUplift's
-discretion and every payout is published.
+else the philanthropic fund). SeekUplift decides how to spend the fund
+and publishes every payout.
 
-**Idea coins:** **direct payout** to an address you name (default), or
+**Idea coins.** **Direct payout** to an address you name (default), or
 **decide later** (90 days, else community takeover).
 
 The choice is permanent once final. Until payouts start in a later
@@ -34,13 +34,13 @@ release, this share is set aside for the project or cause.
 
 ## After launch
 
-- **Graduation:** when the curve fills, the coin moves to the open market
-  and trades via Jupiter. For a moment it can't be traded — close the
+- **Graduation.** When the curve fills, the coin moves to the open market
+  and trades via Jupiter. For a moment nobody can trade it. Close the
   sheet, refresh, and retry.
-- **Creator fees:** **Account → Rewards → Claim**, with the wallet that
-  launched the coin. After graduation, fees from the open-market pool can
+- **Creator fees.** Claim them under **Account → Rewards → Claim** with
+  the wallet that launched the coin. After graduation, fees from the open-market pool can
   also be claimed from Rewards when the coin's launch setup gives the
   creator a share of that pool. Coins launched on the current setup don't
   have one, so Rewards says so instead of showing a claim.
-- **Edit:** **Account → Your tokens** lets the creator wallet edit
+- **Edit.** **Account → Your tokens** lets the creator wallet edit
   description, image, and links.

@@ -4,12 +4,13 @@
 
 Tap the help icon on any screen (options vary by app build):
 
-- **Report a bug** — describe the problem and send. No sign-in needed;
-  never include seed phrases or keys.
-- **Create a support ticket** — reach a human.
-- **Guides & FAQ** — this wiki.
+- **Report a bug.** Describe the problem and send. You don't need to sign
+  in. Never include seed phrases or keys.
+- **Create a support ticket.** Reach a human.
+- **Guides & FAQ.** Opens this wiki.
 
-Security vulnerabilities go via **Account → Security**, not a bug report.
+Report security vulnerabilities under **Account → Security**, not as a bug
+report.
 
 ## FAQ
 
@@ -21,10 +22,10 @@ over ~10 minutes. See [Fees](fees.md).
 **Buy or Sell is greyed out.** The coin isn't available in your region,
 or its market is paused. You can usually still sell.
 
-**Trade says No route found.** The coin just graduated — wait a moment,
+**Trade says No route found.** The coin just graduated. Wait a moment,
 then reopen the sheet.
 
-**Home says Live data unavailable.** The feed is down; it recovers on its
+**Home says Live data unavailable.** The feed is down and recovers on its
 own. Pull to refresh.
 
 **How do I claim creator fees?** **Account → Rewards → Claim**, with the
