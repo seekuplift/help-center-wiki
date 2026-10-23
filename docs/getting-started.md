@@ -34,9 +34,9 @@ Open a coin and tap **Buy** or **Sell**, enter an amount, and review the
 wallet prompt. If you cancel there, nothing moves.
 
 !!! warning "New coins can be expensive"
-    The fee opens at **99%** and falls to its base over ~10 minutes to
+    The fee opens at **99%** and falls to its base over about 10 minutes to
     deter snipers. See [Fees](fees.md).
 
-If a button is disabled, the coin isn't available in your region (the
-reason shows underneath). **Follow** a coin to get its updates; holding
+If a button is disabled, the coin isn't available in your region. The
+reason shows underneath. **Follow** a coin to get its updates; holding
 at least $5 of it lets you post.

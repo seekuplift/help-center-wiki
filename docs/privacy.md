@@ -7,10 +7,10 @@ documents of record; if this page disagrees, they win.
 
 ## Regions
 
-The app uses your network location (mapped to a country, never tied to
-your wallet). Some features are unavailable in some regions. The buttons
-stay visible but disabled. Full list: **Terms → Restricted
-jurisdictions**.
+The app maps your network location to a country and never ties it to
+your wallet. Some features are unavailable in some regions. Their buttons
+stay visible but disabled. **Terms → Restricted jurisdictions** has the
+full list.
 
 ## Data
 
@@ -22,7 +22,7 @@ and permanent.
 
 ## Rules we never break
 
-- **Never ask for your seed phrase or private keys.**
-- **No signature without your tap**, except trades from the optional
+- We never ask for your seed phrase or private keys.
+- Nothing signs without your tap, except trades from the optional
   Instant wallet you set up.
-- **Not financial advice.**
+- Nothing here is financial advice.

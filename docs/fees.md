@@ -2,8 +2,8 @@
 
 --8<-- "includes/test-banner.md"
 
-Every trade pays a fee set by the coin's **fee tier** (picked at launch,
-permanent). Meteora takes **20%** of that fee first. SOL gas is separate.
+Every trade pays a fee set by the coin's **fee tier**, which the creator
+picks at launch and can't change. Meteora takes 20% of that fee first. SOL gas is separate.
 
 ## The split
 
@@ -49,27 +49,27 @@ out next offer:
 | Flat 1.25% / 5% / 10% | Same rate on every trade, before and after graduation |
 
 Every tier, flat ones included, opens at **99%** and falls exponentially
-(fastest at the start) over 20 periods of 75 slots (1,500 slots, about 10
-minutes) to its own fee. The creator's own first buy in the launch
+to its own fee over 20 periods of 75 slots, about 10 minutes in all. It
+falls fastest at the start. The creator's own first buy in the launch
 transaction pays the base fee instead.
 
 Every tier on the curve also adds a small volatility surcharge when
-trading is hectic (up to about +0.25% / +1% / +2% for the 1.25% / 5% /
-10% tiers). The Launch wizard shows the exact schedule before you sign.
+trading is hectic, up to about 0.25% more on the 1.25% tier, 1% more on
+the 5% tier and 2% more on the 10% tier. The Launch wizard shows the exact schedule before you sign.
 
 ## Fee-on-transfer coins
 
 !!! info "Upcoming, not live"
-    Fee-on-transfer coins are **not available yet**. This section
+    Fee-on-transfer coins are not available yet. This section
     describes how they will work.
 
-A coin can be launched as a **fee-on-transfer** coin (a Token-2022
-transfer fee). The coin itself takes **1% or 10%** (more rates to come later) of every
-transfer, **on top of** the trading fee above:
+A creator can launch a coin as a **fee-on-transfer** coin (a Token-2022
+transfer fee). The coin itself takes **1% or 10%** of every transfer, on
+top of the trading fee above. More rates come later.
 
 - It applies to buys, sells, and plain wallet-to-wallet transfers, on
   any venue, before and after graduation.
-- The rate is set at launch.
+- The creator sets the rate at launch.
 - Meteora takes no cut of it, and the creator gets none.
 
 | Config | Creator | Launchpad | Cause |

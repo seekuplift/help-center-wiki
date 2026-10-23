@@ -1,4 +1,4 @@
-# Seek Uplift Help Center
+# Seek Uplift help center
 
 !!! warning "Public test deployment, not production"
     This wiki is a **public test** so we can try the in-app Help → Guides &
