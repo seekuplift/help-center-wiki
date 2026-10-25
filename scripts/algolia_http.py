@@ -9,8 +9,8 @@ import urllib.error
 import urllib.request
 from typing import Any
 
-DEFAULT_APP_ID = "YN9LHHY3JW"
-DEFAULT_SEARCH_KEY = "8e1024885365e67a9c4c641a60a7e8a1"
+DEFAULT_APP_ID = "9BRV23BPIK"
+DEFAULT_SEARCH_KEY = "0c38ad4e137ebba8dc95f59868a374f0"
 KEYWORD_INDEX = "help_center"
 MARKDOWN_INDEX = "help_center_markdown"
 
@@ -206,7 +206,11 @@ def wait_task(app_id: str, api_key: str, index: str, task_id: Any, timeout: floa
     deadline = time.time() + timeout
     while time.time() < deadline:
         data = search_api(app_id, api_key, "GET", f"/1/indexes/{index}/task/{task_id}")
-        if isinstance(data, dict) and data.get("status") == "published":
+        # Some apps never flip `status` to published; `pendingTask: false`
+        # still means the index has no unapplied tasks.
+        if isinstance(data, dict) and (
+            data.get("status") == "published" or data.get("pendingTask") is False
+        ):
             return
         time.sleep(0.25)
     raise TimeoutError(f"Algolia task {task_id} on {index} not published within {timeout}s")

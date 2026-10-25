@@ -8,10 +8,10 @@
    Keep assistantId even when searchMode is keyword or lunr so turning
    Ask AI back on is one field. README: "Switching search modes". */
 window.__ALGOLIA_DOCSEARCH = {
-  "appId": "YN9LHHY3JW",
-  "apiKey": "8e1024885365e67a9c4c641a60a7e8a1",
+  "appId": "9BRV23BPIK",
+  "apiKey": "0c38ad4e137ebba8dc95f59868a374f0",
   "indexName": "help_center",
   "markdownIndexName": "help_center_markdown",
-  "assistantId": "dbf5f1be-667c-4500-a94a-f32fb02c4363",
+  "assistantId": "657f2af2-ffc1-4a73-8014-34df1439c03d",
   "searchMode": "askAi"
 };

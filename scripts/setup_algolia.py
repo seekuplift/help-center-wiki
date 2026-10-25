@@ -2,7 +2,7 @@
 """Create Algolia indexes, DeepSeek provider, and Agent Studio agent.
 
 Env (never commit these):
-  ALGOLIA_APP_ID              default YN9LHHY3JW
+  ALGOLIA_APP_ID              default 9BRV23BPIK
   ALGOLIA_ADMIN_API_KEY or ALGOLIA_WRITE_API_KEY
   ALGOLIA_SEARCH_API_KEY      public search-only key written into algolia-public.js
   DEEPSEEK_API_KEY
