@@ -16,7 +16,7 @@
 site_name: Seek Uplift
 site_description: PUBLIC TEST help-center wiki for Seek Uplift — not production; no promises.
 # Public test Pages URL under the corp account. HC-3 consumes this as EXPO_PUBLIC_WIKI_URL.
-site_url: https://seekuplift.github.io/help-center-wiki/
+site_url: https://seekuplift.com/wiki/
 
 # Build output goes to site/ (the MkDocs default). Both site/ and .venv/ are
 # gitignored — see .gitignore.

@@ -64,7 +64,7 @@ def _request(
         req_headers.setdefault("Content-Type", "application/json")
     req_headers.setdefault(
         "User-Agent",
-        "SeekUpliftWiki/1.0 (Algolia; +https://seekuplift.github.io/help-center-wiki/)",
+        "SeekUpliftWiki/1.0 (Algolia; +https://seekuplift.com/wiki/)",
     )
     req = urllib.request.Request(url, data=data, headers=req_headers, method=method)
     try:

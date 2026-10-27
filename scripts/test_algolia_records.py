@@ -79,7 +79,7 @@ class RecordTests(unittest.TestCase):
             md_name="getting-started.md",
             nav_title="Getting started",
             lvl0="Using the app",
-            site_url="https://seekuplift.github.io/help-center-wiki/",
+            site_url="https://seekuplift.com/wiki/",
         )
         self.assertTrue(keyword)
         self.assertTrue(markdown)

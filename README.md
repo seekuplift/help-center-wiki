@@ -94,7 +94,7 @@ The deploy pipeline lives in `.github/workflows/deploy.yml`. It runs
 `mkdocs build` and publishes `site/` to **GitHub Pages** for this repo.
 
 **Operator-authorized public TEST deploy (2026-09-01):** corp account
-`seekuplift`, repo `help-center-wiki`, GitHub Pages via Actions. The historical
+`seekuplift`, repo `wiki`, GitHub Pages via Actions. The historical
 HC-2 "agent never deploys" override is superseded for this one-time test
 stand-up. Reproducible sequence:
 
@@ -117,11 +117,11 @@ produces plain HTML/CSS/JS with no server-side runtime.
 ## Deployed URL (PUBLIC TEST)
 
 ```
-https://seekuplift.github.io/help-center-wiki/
+https://seekuplift.com/wiki/ (repo renamed from `help-center-wiki` 2026-10-27; `seekuplift.github.io` keeps redirect pages at the old `/help-center-wiki/` paths)
 ```
 
 **This is a public TEST deployment** under the corp GitHub account
-`seekuplift/help-center-wiki`. It exists so the in-app Help → Wiki path can be
+`seekuplift/wiki`. It exists so the in-app Help → Wiki path can be
 exercised end to end. **No production promises** — content may be incomplete,
 wrong, or taken down without notice.
 
@@ -268,7 +268,7 @@ Local / CI environment names:
 4. Commit the updated `docs/javascripts/algolia-public.js` (it now
    contains `assistantId` and `searchMode`). Push so Pages serves the
    widget with Ask AI, unless you left `searchMode` at `keyword` or `lunr`.
-5. In GitHub → `seekuplift/help-center-wiki` → Settings → Secrets and
+5. In GitHub → `seekuplift/wiki` → Settings → Secrets and
    variables → Actions, add:
 
    - `ALGOLIA_APP_ID`
@@ -328,7 +328,7 @@ lunr remains. DocSearch is initialized with
 (unreliable in the incognito WebView).
 
 Indexed hit URLs use `mkdocs.yml` `site_url`
-(`https://seekuplift.github.io/help-center-wiki/`). Local `mkdocs serve`
+(`https://seekuplift.com/wiki/`). Local `mkdocs serve`
 still searches the production index; clicking a hit opens the Pages URL,
 not `http://127.0.0.1:8000`.
 
