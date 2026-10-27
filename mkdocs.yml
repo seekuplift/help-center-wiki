@@ -90,3 +90,7 @@ nav:
   - AI agents: agents.md
   - Privacy and safety: privacy.md
   - Help and FAQ: support.md
+  - Legal:
+      - Terms and Conditions: terms.md
+      - Privacy Policy: privacy-policy.md
+      - Restricted jurisdictions: restricted-jurisdictions.md

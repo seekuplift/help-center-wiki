@@ -2,15 +2,18 @@
 
 --8<-- "includes/test-banner.md"
 
-The in-app **Privacy Center**, **Legal**, and **Security Policy** are the
-documents of record; if this page disagrees, they win.
+The [Terms and Conditions](terms.md), [Privacy Policy](privacy-policy.md),
+and [Restricted Jurisdictions and Features](restricted-jurisdictions.md) are
+the documents of record, along with the in-app **Security Policy**; if this
+page disagrees, they win. The app shows the same documents under **Legal**.
 
 ## Regions
 
 The app maps your network location to a country and never ties it to
 your wallet. Some features are unavailable in some regions. Their buttons
-stay visible but disabled. **Terms → Restricted jurisdictions** has the
-full list.
+stay visible but disabled.
+[Restricted Jurisdictions and Features](restricted-jurisdictions.md) has
+the full list.
 
 ## Data
 

@@ -15,6 +15,7 @@ causes a coin backs.
 - [Fees](fees.md): fee tiers, the split, and graduation
 - [AI agents](agents.md): let your own agent trade and launch
 - [Privacy and safety](privacy.md): data and regions
+- [Terms](terms.md), [Privacy Policy](privacy-policy.md), and [Restricted jurisdictions](restricted-jurisdictions.md): the legal documents
 - [Help and FAQ](support.md): bugs, support, short answers
 
 ## Safety
