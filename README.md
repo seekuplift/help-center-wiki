@@ -117,7 +117,7 @@ produces plain HTML/CSS/JS with no server-side runtime.
 ## Deployed URL (PUBLIC TEST)
 
 ```
-https://seekuplift.com/wiki/ (repo renamed from `help-center-wiki` 2026-10-27; `seekuplift.github.io` keeps redirect pages at the old `/help-center-wiki/` paths)
+https://seekuplift.com/wiki/ (repo renamed from `help-center-wiki` 2026-10-27; old links are not redirected)
 ```
 
 **This is a public TEST deployment** under the corp GitHub account
