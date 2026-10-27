@@ -57,7 +57,7 @@ We do not sell or share your personal data or use it for targeted advertising.
 
 ## 7. Analytics, Cookies, and Device Storage
 
-We and our service providers use cookies, device and browser storage, software development kits, and similar technologies to operate the Service, keep you signed in, remember your preferences, and, where enabled, provide analytics and crash reporting. We do not use them for advertising. Analytics and crash reporting start when you accept these documents on first launch. In the European Economic Area and the United Kingdom, or where we cannot tell where you are, they start only if you tick the separate, optional box on that screen. You can turn them off at any time in the app's Privacy Center. You can manage cookies, storage, and device permissions in your browser or device settings, though some features may then not work. We do not respond to "Do Not Track" signals, and we do not let third parties track your activity across other sites or apps through the Service.
+We and our service providers use cookies, device and browser storage, software development kits, and similar technologies to operate the Service, keep you signed in, remember your preferences, and, where enabled, provide analytics and crash reporting. We do not use them for advertising. Analytics and crash reporting start when you accept this Policy (in the EEA and UK, only if you opt in), and you can turn them off at any time in the app's settings. You can manage cookies, storage, and device permissions in your browser or device settings, though some features may then not work. We do not respond to "Do Not Track" signals, and we do not let third parties track your activity across other sites or apps through the Service.
 
 ## 8. How We Share Information
 
